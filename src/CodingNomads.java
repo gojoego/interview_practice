@@ -41,7 +41,4 @@ public class CodingNomads {
     }
 }
 
-
-
-
-
+// similar to Fizz Buzz question often asked during interviews
