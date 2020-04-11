@@ -18,7 +18,7 @@ public class AnagramSpotter1 {
 
     public static void main(String[] args) {
 
-        anagramOrNot(, "iceman");
+        anagramOrNot("cinema".toCharArray(), "iceman".toCharArray());
 
     }
 
