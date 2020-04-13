@@ -20,20 +20,20 @@ public class CodingNomads {
 
     public static void main(String[] args) {
 
-        printingNumbersAndWords(5);
+        printingNumbersAndWords(90);
 
     }
 
     static void printingNumbersAndWords(int n) {
 
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
 
-            if (n % 3 == 0 && n % 5 == 0) {
-                System.out.println("Coding Nomads");
-            } else if (n % 3 == 0) {
-                System.out.println("Coding");
-            } else if (n % 5 == 0) {
-                System.out.println("Nomads");
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println( i + " Coding Nomads");
+            } else if (i % 3 == 0) {
+                System.out.println(i + " Coding");
+            } else if (i % 5 == 0) {
+                System.out.println(i + " Nomads");
             } else {
                 System.out.println(i);
             }
