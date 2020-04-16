@@ -8,4 +8,24 @@
 //        - reverseString("I'm a little teapot") -> should return 'topeat elttil a m'I'
 
 public class StringReverser {
+
+    public static void main(String[] args) {
+
+        String reverse = reverseString("coronavirus");
+        System.out.println(reverse);
+
+    }
+
+    public static String reverseString(String word) {
+
+        char[] wordArray = word.toCharArray();
+        char[] secondArray = new char[wordArray.length];
+        int j = 0;
+
+        for (int i = wordArray.length - 1; i >= 0; i--) {
+            secondArray[j] = wordArray[i];
+            j++;
+        }
+        return new String(secondArray);
+    }
 }
