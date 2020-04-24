@@ -37,7 +37,7 @@ public class LongestWord {
         int maxLength;
         int countLetters;
 
-        String[] wordsArray = words.split(" ");
+//        String[] wordsArray = words.split(" ");
 
         for (int i = 0; i < wordsArray.length; i++) {
 
