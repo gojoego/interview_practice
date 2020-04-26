@@ -12,14 +12,14 @@
 
 */
 
-public class LongestWord {
-
-    public static void main(String[] args) {
-
-        int longestLength = findLongestWordLength("The quick brown fox jumped over the lazy dog");
-        System.out.println(longestLength);
-
-    }
+//public class LongestWord {
+//
+//    public static void main(String[] args) {
+//
+//        int longestLength = findLongestWordLength("The quick brown fox jumped over the lazy dog");
+//        System.out.println(longestLength);
+//
+//    }
 
 //    public static int findLongestWordLength (String words) {
 //
@@ -31,19 +31,19 @@ public class LongestWord {
 //        return 0;
 //    }
 
-    public static int findLongestWordLength (String sentence) {
-
-        int i;
-        int maxLength;
-        int countLetters;
-
-//        String[] wordsArray = words.split(" ");
-
-        for (int i = 0; i < wordsArray.length; i++) {
-
-        }
-        return 0;
-    }
-
-
-}
+//    public static int findLongestWordLength (String sentence) {
+//
+//        int i;
+//        int maxLength;
+//        int countLetters;
+//
+////        String[] wordsArray = words.split(" ");
+//
+//        for (int i = 0; i < wordsArray.length; i++) {
+//
+//        }
+//        return 0;
+//    }
+//
+//
+//}
