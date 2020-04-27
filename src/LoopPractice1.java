@@ -40,8 +40,26 @@ Question 10
 
 Write a do-while loop that asks the user to enter two numbers. The numbers should be added and the sum displayed. The loop should ask the user whether he or she wishes to perform the operation again. If so, the loop should repeat; otherwise it should terminate.
 
-
 */
 
 public class LoopPractice1 {
+
+    public static void main(String[] args) {
+
+        // function to print 1 to 10
+        System.out.print("numbers 1 to 10: ");
+        printOneToTen();
+
+    }
+
+    public static void printOneToTen (){
+
+        for (int x = 1; x <= 10; x++){
+            System.out.print(x + " ");
+        }
+    }
+
+
+
+
 }
