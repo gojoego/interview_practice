@@ -2,7 +2,7 @@
 
     1. Write a temperature conversion function
         - The function will take two parameters: the temp, and the current unit of temp (either 'C' or 'F')
-        - If the current temp is farenheit, return the temp in celcius and vice versa
+        - If the current temp is fahrenheit, return the temp in celsius and vice versa
         - Try these test cases:
         - convertTemeprature(32, "C") -> Should return 89.6 F
         - convertTemeprature(32, "F") -> Should return 0 C
@@ -52,10 +52,26 @@ public class AlgoChallenge {
 
     public static void main(String[] args) {
 
+        // temperature conversion function
         convertTemp(32, "C");
         convertTemp(32, "F");
         convertTemp(20, "C");
         convertTemp(98, "F");
+
+        System.out.println();
+
+        // string reversing function
+        String reversed1 = reverseString("hello");
+        System.out.println("\"hello\" reversed is " + "\"" + reversed1 + "\"");
+
+        String reversed2 = reverseString("Coding Nomads");
+        System.out.println("\"Coding Nomads\" reversed is " + "\"" + reversed2 + "\"");
+
+        String reversed3 = reverseString("Greetings from Earth");
+        System.out.println("\"Greetings from Earth\" reversed is " + "\"" + reversed3 + "\"");
+
+        String reversed4 = reverseString("I'm a little teapot");
+        System.out.println("\"I'm a little teapot\" reversed is " + "\"" + reversed4 + "\"");
 
     }
 
@@ -68,6 +84,19 @@ public class AlgoChallenge {
             double celsius = (temp - 32) / 1.8;
             System.out.println(temp + " degrees Fahrenheit = " + celsius + " Celsius");
         }
+    }
+
+    public static String reverseString(String word) {
+
+        char[] wordArray = word.toCharArray();
+        char[] secondArray = new char[wordArray.length];
+        int j = 0;
+
+        for (int i = wordArray.length - 1; i >= 0; i--) {
+            secondArray[j] = wordArray[i];
+            j++;
+        }
+        return new String(secondArray);
     }
 
 }
