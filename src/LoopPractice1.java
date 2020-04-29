@@ -6,7 +6,7 @@ Write a program to print numbers from 1 to 10.
 
 Question 2
 
-Write a program to calculate the sum of first 10 natural number.
+Write a program to calculate the sum of first 10 natural numbers.
 
 Question 3
 
@@ -50,6 +50,12 @@ public class LoopPractice1 {
         System.out.print("numbers 1 to 10: ");
         printOneToTen();
 
+        System.out.println();
+
+        // function to add first ten natural numbers
+        int x = sumFirstTenNaturalNumbers();
+        System.out.println("The sum of the first ten natural numbers is: " + x);
+
     }
 
     public static void printOneToTen (){
@@ -59,7 +65,22 @@ public class LoopPractice1 {
         }
     }
 
+    // natural numbers: positive whole numbers (1,2,3...)
+    // will need a loop that adds like this: 1 + 2 + 3 ...
+    // first loop: 1 + 2 = 3
+    // second loop: 3 + 4 = 7
+    // third loop: 7 + 5 = 12
+    public static int sumFirstTenNaturalNumbers(){
 
+        int sum = 0;
+        for (int x = 1; x <= 10; x++){
+            sum = sum + x;
+        } return sum;
+    }
+
+
+    // scanner for user input for a positive number
+    // function to print multiplication table for that number
 
 
 }
