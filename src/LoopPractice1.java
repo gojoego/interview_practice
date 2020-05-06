@@ -58,6 +58,10 @@ public class LoopPractice1 {
         int x = sumFirstTenNaturalNumbers();
         System.out.println("The sum of the first ten natural numbers is: " + x);
 
+        multiplicationTable1();
+
+        multiplicationTable2();
+
     }
 
     public static void printOneToTen() {
@@ -81,7 +85,7 @@ public class LoopPractice1 {
         return sum;
     }
 
-    public static void multiplicationTable() {
+    public static void multiplicationTable1() {
 
         // create scanner
         Scanner scanner = new Scanner(System.in);
@@ -89,21 +93,36 @@ public class LoopPractice1 {
         // prompt user
         System.out.print("Enter a positive number:");
 
+        // assign input from scanner as int variable
         int number = scanner.nextInt();
 
+        // outer loop
+        for (int a = 1; a <= number; a++) {
 
-        for (int a = 1; a <= 10; a++) {
             // inner loop
-            // iterates 10x, count starts at 1 and goes to 10
-            for (int b = 1; b <= 10; b++) {
-                // multiply a * b for each index on each row
+            for (int b = 1; b <= number; b++) {
                 System.out.print(a * b + " |");
             }
-            // needed so that it prints on next line after 10 iterations
             System.out.println();
-
         }
     }
+
+    public static void multiplicationTable2(){
+
+        Scanner console = new Scanner(System.in);
+
+        System.out.println("Enter any positive integer: ");
+
+        int num = console.nextInt();
+
+        System.out.println("Multiplication Table of " + num);
+
+        for (int i = 1; i <= 10; i++){
+            System.out.println(num + " x " + i + " = " + (num*i));
+        }
+
+    }
+
 }
 
 
