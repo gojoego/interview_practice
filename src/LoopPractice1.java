@@ -42,6 +42,8 @@ Write a do-while loop that asks the user to enter two numbers. The numbers shoul
 
 */
 
+import java.util.Scanner;
+
 public class LoopPractice1 {
 
     public static void main(String[] args) {
@@ -58,9 +60,9 @@ public class LoopPractice1 {
 
     }
 
-    public static void printOneToTen (){
+    public static void printOneToTen() {
 
-        for (int x = 1; x <= 10; x++){
+        for (int x = 1; x <= 10; x++) {
             System.out.print(x + " ");
         }
     }
@@ -70,25 +72,39 @@ public class LoopPractice1 {
     // first loop: 1 + 2 = 3
     // second loop: 3 + 4 = 7
     // third loop: 7 + 5 = 12
-    public static int sumFirstTenNaturalNumbers(){
+    public static int sumFirstTenNaturalNumbers() {
 
         int sum = 0;
-        for (int x = 1; x <= 10; x++){
+        for (int x = 1; x <= 10; x++) {
             sum = sum + x;
-        } return sum;
+        }
+        return sum;
     }
 
-    // scanner for user input for a positive number
-    // function to print multiplication table for that number
+    public static void multiplicationTable() {
 
-            for (int a = 1; a <= 10; a++){
-        // inner loop
-        // iterates 10x, count starts at 1 and goes to 10
-        for (int b = 1; b <=10; b++){
-            // multiply a * b for each index on each row
-            System.out.print(a * b + " |");
+        // create scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // prompt user
+        System.out.print("Enter a positive number:");
+
+        int number = scanner.nextInt();
+
+
+        for (int a = 1; a <= 10; a++) {
+            // inner loop
+            // iterates 10x, count starts at 1 and goes to 10
+            for (int b = 1; b <= 10; b++) {
+                // multiply a * b for each index on each row
+                System.out.print(a * b + " |");
+            }
+            // needed so that it prints on next line after 10 iterations
+            System.out.println();
+
         }
-        // needed so that it prints on next line after 10 iterations
-        System.out.println();
-
+    }
 }
+
+
+
