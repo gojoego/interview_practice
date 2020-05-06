@@ -78,7 +78,6 @@ public class LoopPractice1 {
         } return sum;
     }
 
-
     // scanner for user input for a positive number
     // function to print multiplication table for that number
 
