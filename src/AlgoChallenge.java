@@ -4,10 +4,10 @@
         - The function will take two parameters: the temp, and the current unit of temp (either 'C' or 'F')
         - If the current temp is fahrenheit, return the temp in celsius and vice versa
         - Try these test cases:
-        - convertTemeprature(32, "C") -> Should return 89.6 F
-        - convertTemeprature(32, "F") -> Should return 0 C
-        - convertTemeprature(20, "C") -> Should return 68 F
-        - convertTemeprature(98, "F") -> Should return 36.667 C
+        - convertTemperature(32, "C") -> Should return 89.6 F
+        - convertTemperature(32, "F") -> Should return 0 C
+        - convertTemperature(20, "C") -> Should return 68 F
+        - convertTemperature(98, "F") -> Should return 36.667 C
 
     2. Without using any Java or JavaScript native methods, create a function that returns the reverse of a string
         - The function will take one parameter, a string
@@ -98,5 +98,15 @@ public class AlgoChallenge {
         }
         return new String(secondArray);
     }
+
+    public static int returnFactorial (int number){
+
+        for (int i = 0; i <= number; i++){
+            return i+i;
+        }
+
+        return number;
+    }
+
 
 }
