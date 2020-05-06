@@ -81,5 +81,14 @@ public class LoopPractice1 {
     // scanner for user input for a positive number
     // function to print multiplication table for that number
 
+            for (int a = 1; a <= 10; a++){
+        // inner loop
+        // iterates 10x, count starts at 1 and goes to 10
+        for (int b = 1; b <=10; b++){
+            // multiply a * b for each index on each row
+            System.out.print(a * b + " |");
+        }
+        // needed so that it prints on next line after 10 iterations
+        System.out.println();
 
 }
