@@ -42,6 +42,8 @@ public class LoopPractice1 {
 
         multiplicationTable2();
 
+        factorial();
+
     }
 
     public static void printOneToTen() {
@@ -100,6 +102,23 @@ public class LoopPractice1 {
         for (int i = 1; i <= 10; i++){
             System.out.println(num + " x " + i + " = " + (num*i));
         }
+
+    }
+
+    public static void factorial(){
+
+        Scanner console = new Scanner(System.in);
+
+        System.out.println("Enter any number: ");
+
+        int input = console.nextInt();
+        int factorial = 1;
+
+        for (int i = 1; i <= input; i++){
+            factorial *= i;
+        }
+
+        System.out.println("The factorial of " + input + " is " + factorial + ".");
 
     }
 
