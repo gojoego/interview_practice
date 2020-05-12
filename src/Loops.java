@@ -1,9 +1,11 @@
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Loops {
 
     public static void main(String[] args) {
+
+
+        queries();
 
 
         int[] numbers = {
@@ -18,21 +20,23 @@ public class Loops {
         // Your code goes here
     }
 
-    public static void queries(){
+    public static void queries() {
 
         Scanner in = new Scanner(System.in);
-        int t=in.nextInt();
-        for(int i=0;i<t;i++){
+        int t = in.nextInt();
+        for (int i = 0; i <= t; i++) {
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
 
-            // create an Array
-            // each index will have the result
-
+            int result = 0;
+            for (int k = 0; k <= n - 1; k++) {
+                result = (int) Math.pow(2, k) * b + result;
+                System.out.print(a + result + " ");
+            }
+            System.out.println();
         }
         in.close();
-
 
 
     }
