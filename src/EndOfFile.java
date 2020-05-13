@@ -26,7 +26,9 @@ Sample Output
 
 */
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class EndOfFile {
@@ -44,14 +46,15 @@ public class EndOfFile {
 
     public static void EofReader() {
 
+        List <String> inputs = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        String[] inputs;
 
         while (scanner.hasNextLine()) {
-            inputs = scanner.nextLine().split("\\s");
-            System.out.println(Arrays.toString(inputs));
+            inputs.add(scanner.next());
+            System.out.println(inputs);
         }
         scanner.close();
+        System.out.println(inputs);
     }
 }
 
