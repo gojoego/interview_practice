@@ -37,7 +37,16 @@ public class Loops {
             System.out.println();
         }
         in.close();
+    }
 
+    public static void printConsonants(){
+
+        // JAVA: will print JV but not AA
+        // JAVA split into array with 4 indices: [J][A][V][A]
+        // int currentIdx = 0;
+        // Loop: if char at the current index is equal to a VOWEL, do not print
+        // otherwise print
+        // loop and if else statement
 
     }
 
