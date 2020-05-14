@@ -1,4 +1,4 @@
-package hackerRank;/*
+package hackerRankPractice;/*
 
 Task
 Given an integer, n, perform the following conditional actions:
