@@ -26,9 +26,6 @@ Sample Output
 
 */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class EndOfFile {
@@ -39,22 +36,14 @@ public class EndOfFile {
 
     }
 
-    // scanner input
-    // for loop
-    // SOUT number + String
-    // exception handling
-
     public static void EofReader() {
 
-        List <String> inputs = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-
-        while (scanner.hasNextLine()) {
-            inputs.add(scanner.next());
-            System.out.println(inputs);
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        while (scan.hasNext()) {
+            i++;
+            System.out.println(i + " " + scan.nextLine());
         }
-        scanner.close();
-        System.out.println(inputs);
     }
 }
 

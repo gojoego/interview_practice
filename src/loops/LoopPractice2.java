@@ -1,4 +1,4 @@
-/*
+package loops;/*
 
 Question 6
 
