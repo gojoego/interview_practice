@@ -30,5 +30,33 @@ Sample output 2:    java.lang.Exception: Breadth and height must be positive
 
 */
 
+import java.util.Scanner;
+
 public class StaticInitializerBlock {
+
+    static class Parallelogram {
+        int B;
+        int H;
+
+        static {
+
+            Scanner scanner = new Scanner(System.in);
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+//
+//        if(flag){
+//            int area=B*H;
+//            System.out.print(area);
+//        }
+
+    }
+
 }
+
+
+
+
