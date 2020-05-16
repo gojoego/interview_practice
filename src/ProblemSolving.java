@@ -4,7 +4,11 @@ public class ProblemSolving {
 
     public static void main(String[] args) {
 
+
     }
+
+
+
 
     // #1 come up with a brute-force solution
 
