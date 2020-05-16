@@ -48,6 +48,8 @@ A program is a collection of classes. The basic code for declaring a Java class 
 
 class MyClass {
 
+    Scanner scan = new Scanner(System.in);
+
     DataType myVariable;
 
     public static void myClass(){}
@@ -57,6 +59,15 @@ class MyClass {
     /*  This is also a comment.
         This type of comment can span several lines
     */
+
+    int myMethod(){
+        // ...does cool stuff.
+        return 0;
+    }
+
+    void myMethod(int myInt){
+        // ...does cool stuff.
+    }
 }
 
 class DataType{}
@@ -109,6 +120,61 @@ the naming convention used in Java, though there are many other languages where 
 used frequently (e.g.: C, C++, Python, etc.); however, you may see some Java coders begin certain
 special variable names (e.g.: private class variables or constants) with an underscore to distinguish
 them from other variables used throughout their program.
+
+FUNCTION
+
+A sequence of packaged instructions that perform a task.
+
+METHOD
+
+In Object-Oriented programming, a method is a type of function that operates on the fields of a class.
+
+int myMethod(){
+	// ...does cool stuff.
+}
+void myMethod(int myInt){
+	// ...does cool stuff.
+}
+
+OBJECT
+
+An Object is an instance (or variable) of a class.
+
+STREAM
+
+Think of this as the flow of data from one place to another. Most of our challenges require you to
+read input from System.in (also known as stdin, the standard input stream), and write output to
+System.out (also known as stdout, the standard output stream). In Java, the Scanner class is widely
+used to read input, but each language has its own mechanism for handling IO (input and output).
+
+The syntax for reading from stdin using the Scanner class is as follows:
+
+Scanner scan = new Scanner(System.in);
+This creates a new Scanner object that reads from the System.in stream and can be accessed using the
+variable name scan. To read in information from stdin, you just need to apply Scanner's methods to your
+scanner object. Here are two basic examples:
+
+scan.next(); // returns the next token of input
+scan.hasNext(); // returns true if there is another token of input (false otherwise)
+scan.nextLine() // returns the next LINE of input
+scan.hasNextLine(); // returns true if there is another line of input
+
+When you are finished reading from an input stream, you should close it to avoid a resource leak.
+The following line of code closes the Scanner object referenced by our  variable:
+
+scan.close();
+
+Let's say we want to assign a value received from stdin to some String that we'll name 8,
+and then print it. We can accomplish this with the following code:
+
+Scanner scan = new Scanner(System.in); // open scanner
+String s = scan.next(); // read the next token and save it to 's'
+scan.close(); // close scanner
+System.out.println(s); // print 's' to System.out, followed by a new line
+If the input token is Hi!, the above code will print Hi!.
+
+You can also print text in quotes using System.out.println, or combine quoted
+text with a variable (e.g.: System.out.println("Input received: " + s);)
 
  */
 
