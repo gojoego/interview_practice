@@ -59,8 +59,14 @@ public class DataTypes {
 
         SolutionDay1.addingVariables();
 
-        Car car = new Car();
-        car.printVariables();
+        Car familyCar = new Car();
+        familyCar.printVariables();
+        Car aliceCar = familyCar;
+        familyCar.wreckCar();
+        familyCar.upgradeMinSpeed();
+
+        System.out.println("Alice's Car");
+        aliceCar.printVariables();
 
     }
 
@@ -115,6 +121,7 @@ class Car {
     double weight = 4079;
     boolean isTheCarOn = false;
     char condition = 'A';
+    String nameOfCar = "Lucy";
     // notice the use of camelCase
 
     public void printVariables(){
@@ -123,6 +130,14 @@ class Car {
         System.out.println("This is the weight: " + weight);
         System.out.println("Is the car on or off? " + isTheCarOn);
         System.out.println("This is the condition: " + condition);
+        System.out.println("This is the name of the car: " + nameOfCar);
+    }
+
+    public void wreckCar(){}
+
+    public void upgradeMinSpeed(){
+        minSpeed = maxSpeed;
+        maxSpeed = maxSpeed + 1;
     }
 
 }
@@ -142,6 +157,12 @@ Java has 8 primitive data types: byte, short, int, long, float, double, boolean,
 For most challenges, you'll only need to concern yourselves with ints (e.g.: 1, 2, 3, etc.) and
 doubles (e.g.: 1.0, 2.5, 3.9, etc.). Another important data type we mentioned yesterday is the
 String class, whose objects are immutable strings of characters.
+
+REFERENCE TYPE
+
+Shared copy
+
+examples: Arrays, Queues, Linked Lists, Stacks
 
 SCANNER
 
