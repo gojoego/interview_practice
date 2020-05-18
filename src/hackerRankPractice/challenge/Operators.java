@@ -2,10 +2,10 @@ package hackerRankPractice.challenge;
 
 /*
 
-Objective
-In this challenge, you'll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!
+Objective:
+In this challenge, you'll work with arithmetic operators.
 
-Task
+Task:
 Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
 
 Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result!
@@ -65,13 +65,18 @@ The binary operators used for arithmetic are as follows:
 /: Division
 %: Remainder (modulo)
 
+ADDITIONAL OPERATORS
 
-Additional Operators
++:  A binary operator used for String concatenation
 
-+: A binary operator used for String concatenation
-++: This unary operator is used to preincrement (increment by 1 before use) when prepended to a variable name or postincrement (increment by 1 after use) when appended to a variable.
---: This unary operator is used to predecrement (decrement by 1 before use) when prepended to a variable name or postdecrement (decrement by 1 after use) when appended to a variable.
-!: This unary operator means not (negation). It's used before a variable or logical expression that evaluates to true or false.
+++: This unary operator is used to pre-increment (increment by 1 before use)
+    when prepended to a variable name or post-increment (increment by 1 after use)
+    when appended to a variable.
+
+--: This unary operator is used to pre-decrement (decrement by 1 before use) when prepended
+    to a variable name or post-decrement (decrement by 1 after use) when appended to a variable.
+
+!:  This unary operator means not (negation). It's used before a variable or logical expression that evaluates to true or false.
 ==: This binary operator is used to check the equality of 2 primitives.
 !=: This binary operator is used to check the inequality of 2 primitives.
 <, >, <=, >=: These are the respective binary operators for less than, greater than, less than or equal to, and greater than or equal to, and are used to compare two operands.
