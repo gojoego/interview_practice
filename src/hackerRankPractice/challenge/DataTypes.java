@@ -125,12 +125,14 @@ class Car {
     // notice the use of camelCase
 
     public void printVariables(){
+
         System.out.println("This is the maxSpeed: " + maxSpeed);
         System.out.println("This is the minSpeed: " + minSpeed);
         System.out.println("This is the weight: " + weight);
         System.out.println("Is the car on or off? " + isTheCarOn);
         System.out.println("This is the condition: " + condition);
         System.out.println("This is the name of the car: " + nameOfCar);
+
     }
 
     public void wreckCar(){}
