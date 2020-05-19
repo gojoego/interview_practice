@@ -6,20 +6,22 @@ Objective:
 In this challenge, you'll work with arithmetic operators.
 
 Task:
-Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip),
+and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
 
 Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result!
 
 Input Format
 
-There are  lines of numeric input:
-The first line has a double,  (the cost of the meal before tax and tip).
-The second line has an integer,  (the percentage of  being added as tip).
-The third line has an integer,  (the percentage of  being added as tax).
+There are 3 lines of numeric input:
+The first line has a double, mealCost (the cost of the meal before tax and tip).
+The second line has an integer, tipPercent (the percentage of mealCost being added as tip).
+The third line has an integer, taxPercent (the percentage of mealCost being added as tax).
 
 Output Format
 
-Print the total meal cost, where  is the rounded integer result of the entire bill ( with added tax and tip).
+Print the total meal cost, where totalCost is the rounded integer
+result of the entire bill (mealCost with added tax and tip).
 
 Sample Input
 
@@ -32,18 +34,25 @@ Sample Output
 Explanation
 
 Given:
-, ,
+
+mealCost = 12, tipPercent = 20, taxPercent = 8
 
 Calculations:
+tip = 12 x (20/100) = 2.4
+tax = 12 x (8/100) = 0.96
+totalCost = mealCost + tip + tax = 12 + 2.4 + 0.96 = 15.36
+round(totalCost) = 15
 
-
-
-
-We round  to the nearest dollar (integer) and then print our result, .
+We round totalCost to the nearest dollar (integer) and then print our result, 15.
 
 */
 
 public class Operators {
+
+
+    public static void main(String[] args) {
+
+    }
 }
 
 /*
@@ -76,11 +85,19 @@ ADDITIONAL OPERATORS
 --: This unary operator is used to pre-decrement (decrement by 1 before use) when prepended
     to a variable name or post-decrement (decrement by 1 after use) when appended to a variable.
 
-!:  This unary operator means not (negation). It's used before a variable or logical expression that evaluates to true or false.
+!:  This unary operator means not (negation).
+    It's used before a variable or logical expression that evaluates to true or false.
+
 ==: This binary operator is used to check the equality of 2 primitives.
+
 !=: This binary operator is used to check the inequality of 2 primitives.
-<, >, <=, >=: These are the respective binary operators for less than, greater than, less than or equal to, and greater than or equal to, and are used to compare two operands.
-&&, ||: These are the respective binary operators used to perform logical AND and logical OR operations on two boolean (i.e.: true or false) statements.
-? : This ternary operator is used for simple conditional statements (i.e.: if ? then : else).
+
+<, >, <=, >=:   These are the respective binary operators for less than, greater than, less
+                than or equal to, and greater than or equal to, and are used to compare two operands.
+
+&&, ||:     These are the respective binary operators used to perform logical AND and logical OR operations
+            on two boolean (i.e.: true or false) statements.
+
+? :         This ternary operator is used for simple conditional statements (i.e.: if ? then : else).
 
 */

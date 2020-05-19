@@ -114,15 +114,38 @@ class SolutionDay1 {
     }
 }
 
+/*
+
+creating variables
+
+1. declare (typing out name of variable)
+2. allocate (make space for variable, type)
+3. initialize (assigning a value)
+
+*/
+
+
 class Car {
 
+    // instance variables
     int maxSpeed = 100;
     int minSpeed = 0;
+
     double weight = 4079;
+
+    // notice the use of camelCase
+
     boolean isTheCarOn = false;
     char condition = 'A';
     String nameOfCar = "Lucy";
-    // notice the use of camelCase
+
+
+    double maxFuel = 16;
+    double currentFuel = 8; // declaring and allocating and initializing
+    double mpg = 26.4; // declaring variable mpg, allocating space for double, giving it a value and initializing
+
+    int numberOfPeopleInCar = 1; // int because you can't hav 1.5 people in a car
+
 
     public void printVariables(){
 
