@@ -60,7 +60,6 @@ public class DataTypes {
         SolutionDay1.addingVariables();
 
 
-
 //        Car familyCar = new Car();
 //        familyCar.printVariables();
 //        Car aliceCar = familyCar;
@@ -88,6 +87,8 @@ public class DataTypes {
         birthdayPresent.getOut();
         System.out.println("Birthday Car v3");
         birthdayPresent.printVariables();
+
+        Car tommyCar = new Car();
 
 //        System.out.println("Christmas Car");
 //        Car christmasPresent = new Car(550, 2000, false);
@@ -170,6 +171,7 @@ class Car {
     double mpg = 26.4; // declaring variable mpg, allocating space for double, giving it a value and initializing
 
     int numberOfPeopleInCar = 1; // int because you can't hav 1.5 people in a car
+    int maxNumberOfPeopleInCar = 6;
 
     // custom car vs. default car
     // custom car - custom initializer - set custom values to properties
@@ -177,13 +179,16 @@ class Car {
     // use constructor as custom initializer
 
     // parameter: a variable in a function that refers to input data
-    public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn){
+    public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn) {
         maxSpeed = customMaxSpeed;
         weight = customWeight;
         isTheCarOn = customIsTheCarOn;
     }
+    public Car(){
 
-    public void printVariables(){
+    }
+
+    public void printVariables() {
         System.out.println("This is the maxSpeed: " + maxSpeed);
         System.out.println("This is the minSpeed: " + minSpeed);
         System.out.println("This is the weight: " + weight);
@@ -193,30 +198,57 @@ class Car {
         System.out.println(numberOfPeopleInCar);
     }
 
-    public void wreckCar(){}
+    public void wreckCar() {
+    }
 
-    public void upgradeMinSpeed(){
+    public void upgradeMinSpeed() {
         minSpeed = maxSpeed;
         maxSpeed = maxSpeed + 1;
     }
 
-    public void getIn(){
+    public void getIn() {
         //numberOfPeopleInCar = numberOfPeopleInCar + 1;
-        numberOfPeopleInCar++;
-    }
-    public void getOut(){
-        //numberOfPeopleInCar = numberOfPeopleInCar - 1;
-        numberOfPeopleInCar--;
+        if (numberOfPeopleInCar > maxNumberOfPeopleInCar) {
+            numberOfPeopleInCar++;
+            System.out.println("Someone got in");
+        } else {
+            System.out.println("The car is full! " + numberOfPeopleInCar + " = " + maxNumberOfPeopleInCar);
+        }
     }
 
-    public double howManyMilesTilOutOfGas(){
+    public void getOut() {
+        //numberOfPeopleInCar = numberOfPeopleInCar - 1;
+        if (numberOfPeopleInCar > 0) {
+            numberOfPeopleInCar--;
+        } else {
+            System.out.println("No one is in the car");
+        }
+    }
+
+    public double howManyMilesTilOutOfGas() {
         return currentFuel * mpg;
     }
 
-    public double maxMilePerFillUp(){
+    public double maxMilePerFillUp() {
         return maxFuel * mpg;
     }
     // separating code into functions allows tracking and method saving
+
+    public void turnTheCarOn() {
+        if (!isTheCarOn) {
+            isTheCarOn = true;
+        }
+    }
+    /*
+
+    if statement:
+    -if the car is already on, do nothing
+    -if the car is not on, set isTheCarOn to true
+
+    if statement:
+    -if (condition){do this}
+
+    */
 
 }
 
