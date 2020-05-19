@@ -97,6 +97,7 @@ public class DataTypes {
         tommyCar.getIn();
         tommyCar.getIn();
         tommyCar.getIn();
+        tommyCar.getIn();
         tommyCar.turnTheCarOn();
         tommyCar.turnTheCarOn();
 
@@ -221,19 +222,25 @@ class Car {
 
     public void getIn() {
         //numberOfPeopleInCar = numberOfPeopleInCar + 1;
+        // if there aren't too many people in the car
         if (numberOfPeopleInCar < maxNumberOfPeopleInCar) {
+            // then someone can get in
             numberOfPeopleInCar++;
             System.out.println("Someone got in");
         } else {
+            // otherwise print out the fact that the car is full
             System.out.println("The car is full! " + numberOfPeopleInCar + " = " + maxNumberOfPeopleInCar);
         }
     }
 
     public void getOut() {
         //numberOfPeopleInCar = numberOfPeopleInCar - 1;
+        // if there's people in the car
         if (numberOfPeopleInCar > 0) {
+            // then tell one to get out
             numberOfPeopleInCar--;
         } else {
+            // otherwise not one can get out and we'll print that
             System.out.println("No one is in the car " + numberOfPeopleInCar);
         }
     }
@@ -249,9 +256,12 @@ class Car {
     // separating code into functions allows tracking and method saving
 
     public void turnTheCarOn() {
+        // if the car isn't on...
         if (!isTheCarOn) {
+            // turn it on
             isTheCarOn = true;
         } else{
+            // otherwise print out the fact that it's on already
             System.out.println("The Car is already on " + isTheCarOn);
         }
     }
