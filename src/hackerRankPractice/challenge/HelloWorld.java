@@ -1,6 +1,16 @@
 package hackerRankPractice.challenge;
 
 
+/*
+
+main function aka "the body shop"
+-where you make things
+
+tools -> methods -> instances
+
+*/
+
+
 import java.util.Scanner;
 
 public class HelloWorld {

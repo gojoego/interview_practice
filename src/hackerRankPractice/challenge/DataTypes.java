@@ -59,7 +59,7 @@ public class DataTypes {
 
         SolutionDay1.addingVariables();
 
-        Car familyCar = new Car();
+        Car familyCar = new Car(2);
         familyCar.printVariables();
         Car aliceCar = familyCar;
         familyCar.wreckCar();
@@ -67,6 +67,13 @@ public class DataTypes {
 
         System.out.println("Alice's Car");
         aliceCar.printVariables();
+
+        // the value 10 is an argument
+        // argument: a piece of data passed into a function whose value becomes the value of the parameter
+        // f(x) = x + 1;
+        // say x = 5;
+        // f(5) = 5 + 1 = 6
+        Car birthdayPresent = new Car(10);
 
     }
 
@@ -146,6 +153,15 @@ class Car {
 
     int numberOfPeopleInCar = 1; // int because you can't hav 1.5 people in a car
 
+    // custom car vs. default car
+    // custom car - custom initializer - set custom values to properties
+    // default car - default initializer - set default values to properties
+    // use constructor as custom initializer
+
+    // parameter: a variable in a function that refers to input data
+    public Car(int customMinSpeed){
+
+    }
 
     public void printVariables(){
 
