@@ -160,7 +160,7 @@ class Car {
 
     // parameter: a variable in a function that refers to input data
     public Car(int customMinSpeed){
-
+        minSpeed = customMinSpeed;
     }
 
     public void printVariables(){
