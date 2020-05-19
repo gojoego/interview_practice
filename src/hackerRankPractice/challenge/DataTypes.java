@@ -190,6 +190,23 @@ class Car {
         maxSpeed = maxSpeed + 1;
     }
 
+    public void getIn(){
+        //numberOfPeopleInCar = numberOfPeopleInCar + 1;
+        numberOfPeopleInCar++;
+    }
+    public void getOut(){
+        //numberOfPeopleInCar = numberOfPeopleInCar - 1;
+        numberOfPeopleInCar--;
+    }
+
+    public double howManyMilesTilOutOfGas(){
+        return currentFuel * mpg;
+    }
+
+    public double maxMilePerFillUp(){
+        return maxFuel * mpg;
+    }
+
 }
 
 
