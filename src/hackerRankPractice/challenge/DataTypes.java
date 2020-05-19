@@ -57,7 +57,7 @@ public class DataTypes {
 
     public static void main(String[] args) {
 
-        SolutionDay1.addingVariables();
+//        SolutionDay1.addingVariables();
 
 
 //        Car familyCar = new Car();
@@ -74,21 +74,34 @@ public class DataTypes {
         // f(x) = x + 1;
         // say x = 5;
         // f(5) = 5 + 1 = 6
-        Car birthdayPresent = new Car(500, 5000.545, true);
-        System.out.println("Birthday Car v1");
-        birthdayPresent.printVariables();
-        birthdayPresent.getIn();
-        birthdayPresent.getIn();
-        birthdayPresent.getIn();
-        System.out.println("Miles Left: " + birthdayPresent.howManyMilesTilOutOfGas());
-        System.out.println("Max Miles: " + birthdayPresent.maxMilePerFillUp());
-        System.out.println("Birthday Car v2");
-        birthdayPresent.printVariables();
-        birthdayPresent.getOut();
-        System.out.println("Birthday Car v3");
-        birthdayPresent.printVariables();
+//        Car birthdayPresent = new Car(500, 5000.545, true);
+//        System.out.println("Birthday Car v1");
+//        birthdayPresent.printVariables();
+//        birthdayPresent.getIn();
+//        birthdayPresent.getIn();
+//        birthdayPresent.getIn();
+//        System.out.println("Miles Left: " + birthdayPresent.howManyMilesTilOutOfGas());
+//        System.out.println("Max Miles: " + birthdayPresent.maxMilePerFillUp());
+//        System.out.println("Birthday Car v2");
+//        birthdayPresent.printVariables();
+//        birthdayPresent.getOut();
+//        System.out.println("Birthday Car v3");
+//        birthdayPresent.printVariables();
 
         Car tommyCar = new Car();
+        tommyCar.getOut();
+        tommyCar.getOut();
+        tommyCar.getIn();
+        tommyCar.getIn();
+        tommyCar.getIn();
+        tommyCar.getIn();
+        tommyCar.getIn();
+        tommyCar.getIn();
+        tommyCar.turnTheCarOn();
+        tommyCar.turnTheCarOn();
+
+
+
 
 //        System.out.println("Christmas Car");
 //        Car christmasPresent = new Car(550, 2000, false);
@@ -208,7 +221,7 @@ class Car {
 
     public void getIn() {
         //numberOfPeopleInCar = numberOfPeopleInCar + 1;
-        if (numberOfPeopleInCar > maxNumberOfPeopleInCar) {
+        if (numberOfPeopleInCar < maxNumberOfPeopleInCar) {
             numberOfPeopleInCar++;
             System.out.println("Someone got in");
         } else {
@@ -221,9 +234,10 @@ class Car {
         if (numberOfPeopleInCar > 0) {
             numberOfPeopleInCar--;
         } else {
-            System.out.println("No one is in the car");
+            System.out.println("No one is in the car " + numberOfPeopleInCar);
         }
     }
+    // can have the "if" without the "else" but cannot have the "else" without the "if"
 
     public double howManyMilesTilOutOfGas() {
         return currentFuel * mpg;
@@ -237,6 +251,8 @@ class Car {
     public void turnTheCarOn() {
         if (!isTheCarOn) {
             isTheCarOn = true;
+        } else{
+            System.out.println("The Car is already on " + isTheCarOn);
         }
     }
     /*
