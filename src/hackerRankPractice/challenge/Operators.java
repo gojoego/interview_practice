@@ -128,4 +128,18 @@ ADDITIONAL OPERATORS
 
 ? :         This ternary operator is used for simple conditional statements (i.e.: if ? then : else).
 
+variables:
+1. declare
+2. allocate
+3. initialize
+
+instance methods and properties
+
+constructors
+1. default
+2. custom
+
+initializing an instance of a car
+
+
 */

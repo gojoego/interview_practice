@@ -75,12 +75,23 @@ public class DataTypes {
         // f(x) = x + 1;
         // say x = 5;
         // f(5) = 5 + 1 = 6
-        System.out.println("Birthday Car");
         Car birthdayPresent = new Car(500, 5000.545, true);
+        System.out.println("Birthday Car v1");
         birthdayPresent.printVariables();
-        System.out.println("Christmas Car");
-        Car christmasPresent = new Car(550, 2000, false);
-        christmasPresent.printVariables();
+        birthdayPresent.getIn();
+        birthdayPresent.getIn();
+        birthdayPresent.getIn();
+        System.out.println("Miles Left: " + birthdayPresent.howManyMilesTilOutOfGas());
+        System.out.println("Max Miles: " + birthdayPresent.maxMilePerFillUp());
+        System.out.println("Birthday Car v2");
+        birthdayPresent.printVariables();
+        birthdayPresent.getOut();
+        System.out.println("Birthday Car v3");
+        birthdayPresent.printVariables();
+
+//        System.out.println("Christmas Car");
+//        Car christmasPresent = new Car(550, 2000, false);
+//        christmasPresent.printVariables();
 
     }
 
@@ -173,14 +184,13 @@ class Car {
     }
 
     public void printVariables(){
-
         System.out.println("This is the maxSpeed: " + maxSpeed);
         System.out.println("This is the minSpeed: " + minSpeed);
         System.out.println("This is the weight: " + weight);
         System.out.println("Is the car on or off? " + isTheCarOn);
         System.out.println("This is the condition: " + condition);
         System.out.println("This is the name of the car: " + nameOfCar);
-
+        System.out.println(numberOfPeopleInCar);
     }
 
     public void wreckCar(){}
@@ -206,6 +216,7 @@ class Car {
     public double maxMilePerFillUp(){
         return maxFuel * mpg;
     }
+    // separating code into functions allows tracking and method saving
 
 }
 
