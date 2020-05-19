@@ -59,6 +59,8 @@ public class DataTypes {
 
         SolutionDay1.addingVariables();
 
+
+
 //        Car familyCar = new Car();
 //        familyCar.printVariables();
 //        Car aliceCar = familyCar;
@@ -73,7 +75,12 @@ public class DataTypes {
         // f(x) = x + 1;
         // say x = 5;
         // f(5) = 5 + 1 = 6
+        System.out.println("Birthday Car");
         Car birthdayPresent = new Car(500, 5000.545, true);
+        birthdayPresent.printVariables();
+        System.out.println("Christmas Car");
+        Car christmasPresent = new Car(550, 2000, false);
+        christmasPresent.printVariables();
 
     }
 
@@ -161,7 +168,8 @@ class Car {
     // parameter: a variable in a function that refers to input data
     public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn){
         maxSpeed = customMaxSpeed;
-
+        weight = customWeight;
+        isTheCarOn = customIsTheCarOn;
     }
 
     public void printVariables(){
