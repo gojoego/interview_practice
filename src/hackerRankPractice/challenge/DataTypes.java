@@ -209,9 +209,9 @@ class Car {
     }
 
     // function scope: public, protected or private
-    // parameter: a variable in a function that refers to input data 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    // parameter: a variable in a function that refers to input data
+    public void setMaxSpeed(int newMaxSpeed) {
+        this.maxSpeed = newMaxSpeed;
     }
 
     public int getMinSpeed() {
@@ -302,6 +302,10 @@ class Car {
         System.out.println("This is the condition: " + condition);
         System.out.println("This is the name of the car: " + nameOfCar);
         System.out.println(numberOfPeopleInCar);
+    }
+
+    public void upgradeMaxSpeed(){
+        setMaxSpeed(getMaxSpeed() + 10);
     }
 
     public void wreckCar() {

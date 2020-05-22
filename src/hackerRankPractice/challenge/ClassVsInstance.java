@@ -217,4 +217,36 @@ getters: get values of our properties
 
 setters: set values of our properties
 
+boolean operators:  and
+                    or
+                    not
+
+*deal with conditions*
+
+if (condition) {
+  condition true: do this
+} else {
+  condition false: do this
+}
+
+boolean operators help condense your if statements
+
+and inside an if:
+if (c1 && c2){
+   do this
+}
+
+or inside an if:
+if (c1 || c2){
+   do this
+}
+
+not inside an if:
+if (!c1){
+   do this
+}
+if (a!=b){
+   do this
+}
+
 */
