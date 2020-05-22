@@ -27,6 +27,11 @@ public class GuessTheNumber {
         howBigIsMyNumber(-1);
         howBigIsMyNumber(105);
 
+        GuessTheNumber guessGame = new GuessTheNumber();
+        System.out.println("Welcome to my game. Try and guess my impossible number. It's between 0 and " +
+                guessGame.max + " inclusive. Just type a number to get started.");
+        guessGame.play();
+
     }
 
     int theNUMBER;
@@ -35,17 +40,21 @@ public class GuessTheNumber {
 
     public GuessTheNumber() {
         Random random = new Random();
+        max = 100;
         theNUMBER = Math.abs(random.nextInt()) % (max + 1);
     }
 
     public void play(){
-        int move = scanner.nextInt();
-        if (move > theNUMBER){
-            System.out.println("Your number is too big");
-        } else if (move < theNUMBER){
-            System.out.println("Your number is too small");
-        } else {
-            System.out.println("YOU GOT IT!");
+        while (true) {
+            int move = scanner.nextInt();
+            if (move > theNUMBER) {
+                System.out.println("Your number is too big");
+            } else if (move < theNUMBER) {
+                System.out.println("Your number is too small");
+            } else {
+                System.out.println("YOU GOT IT!");
+                break;
+            }
         }
     }
 
