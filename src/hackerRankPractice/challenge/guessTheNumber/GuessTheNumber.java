@@ -4,10 +4,21 @@ package hackerRankPractice.challenge.guessTheNumber;
 
 class method: no instance needed to use this function
 
+how big is #?
+if (# > 0){
+  print out # is big
+}
+
 how to play:    1. computer picks random number
                 2. user guesses
                 3. computer gives clues
                 4. we guess until we get it
+
+getters: get values of our properties
+
+setters: set values of our properties
+
+
 
 */
 
