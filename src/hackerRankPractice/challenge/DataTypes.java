@@ -202,6 +202,98 @@ class Car {
 
     }
 
+    // getters and setters for cleaner code
+
+    public int getMaxSpeed() {
+        return this.maxSpeed;
+    }
+
+    // function scope: public, protected or private
+    // parameter: a variable in a function that refers to input data 
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public int getMinSpeed() {
+        return this.minSpeed;
+    }
+
+    public void setMinSpeed(int minSpeed) {
+        this.minSpeed = minSpeed;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public boolean isTheCarOn() {
+        return this.isTheCarOn;
+    }
+
+    public void setTheCarOn(boolean theCarOn) {
+        isTheCarOn = theCarOn;
+    }
+
+    public char getCondition() {
+        return condition;
+    }
+
+    public void setCondition(char condition) {
+        this.condition = condition;
+    }
+
+    public String getNameOfCar() {
+        return nameOfCar;
+    }
+
+    public void setNameOfCar(String nameOfCar) {
+        this.nameOfCar = nameOfCar;
+    }
+
+    public double getMaxFuel() {
+        return maxFuel;
+    }
+
+    public void setMaxFuel(double maxFuel) {
+        this.maxFuel = maxFuel;
+    }
+
+    public double getCurrentFuel() {
+        return currentFuel;
+    }
+
+    public void setCurrentFuel(double currentFuel) {
+        this.currentFuel = currentFuel;
+    }
+
+    public double getMpg() {
+        return mpg;
+    }
+
+    public void setMpg(double mpg) {
+        this.mpg = mpg;
+    }
+
+    public int getNumberOfPeopleInCar() {
+        return numberOfPeopleInCar;
+    }
+
+    public void setNumberOfPeopleInCar(int numberOfPeopleInCar) {
+        this.numberOfPeopleInCar = numberOfPeopleInCar;
+    }
+
+    public int getMaxNumberOfPeopleInCar() {
+        return maxNumberOfPeopleInCar;
+    }
+
+    public void setMaxNumberOfPeopleInCar(int maxNumberOfPeopleInCar) {
+        this.maxNumberOfPeopleInCar = maxNumberOfPeopleInCar;
+    }
+
     public void printVariables() {
         System.out.println("This is the maxSpeed: " + maxSpeed);
         System.out.println("This is the minSpeed: " + minSpeed);
@@ -236,7 +328,7 @@ class Car {
     public void getOut() {
         //numberOfPeopleInCar = numberOfPeopleInCar - 1;
         // if there's people in the car
-        if (numberOfPeopleInCar > 0) {
+        if (this.numberOfPeopleInCar > 0) {
             // then tell one to get out
             numberOfPeopleInCar--;
         } else {

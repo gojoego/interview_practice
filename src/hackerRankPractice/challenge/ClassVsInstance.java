@@ -81,12 +81,50 @@ Test Case 3: initialAge = 18
 Because initialAge >= 18, our code should print that the person is old.
 Three years pass and the person is still old at age = 21, so we print the old message again.
 
-The extra line at the end of the output is supposed to be there and is trimmed before being compared against the test case's expected output. If you're failing this challenge, check your logic and review your print statements for spelling errors.
+The extra line at the end of the output is supposed to be there and is trimmed before being compared
+against the test case's expected output. If you're failing this challenge, check your logic and review
+your print statements for spelling errors.
 
 */
 
 
+import java.util.Scanner;
+
 public class ClassVsInstance {
+}
+
+
+class Person {
+    private int age;
+
+    public Person(int initialAge) {
+        // Add some more code to run some checks on initialAge
+    }
+
+    public void amIOld() {
+        // Write code determining if this person's age is old and print the correct statement:
+        System.out.println(/*Insert correct print statement here*/);
+    }
+
+    public void yearPasses() {
+        // Increment this person's age.
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i = 0; i < T; i++) {
+            int age = sc.nextInt();
+            Person p = new Person(age);
+            p.amIOld();
+            for (int j = 0; j < 3; j++) {
+                p.yearPasses();
+            }
+            p.amIOld();
+            System.out.println();
+        }
+        sc.close();
+    }
 }
 
 /*
@@ -172,3 +210,11 @@ class Dog{ // class name
         this.coatColor = color;
     }
 }
+
+/*
+
+getters: get values of our properties
+
+setters: set values of our properties
+
+*/
