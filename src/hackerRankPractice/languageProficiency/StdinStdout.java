@@ -1,4 +1,4 @@
-package hackerRankPractice;
+package hackerRankPractice.languageProficiency;
 
 import java.util.Scanner;
 

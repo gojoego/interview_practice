@@ -97,7 +97,20 @@ produces this output:
 2
 3
 
-While Loop
+WHILE LOOP
+
+definition: a control flow statement that allows code to be executed repeatedly based on some given condition
+
+while (true condition){
+    do things
+}
+
+while (still true){
+    do things again
+}
+
+a while loop - a repeating if-statement
+
 This type of loop requires a single boolean condition and continues looping as long as that condition
 continues to be true. Each time the the end of the loop is reached, it loops back to the top and checks
 if the condition is still true. If it's true, the loop will run again; if it's false, then the program
