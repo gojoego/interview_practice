@@ -1,5 +1,21 @@
 package hackerRankPractice.challenge;
 
+/*
+
+loop:   a control flow statement that allows code to be executed repeatedly based on some given condition;
+        like repeating if statements
+
+all loops consist of:
+
+1. a condition
+2. a block of code to be executed if the condition is true
+
+for loop: give and increment a variable automatically
+
+while/do: do not give or increment a variable automatically
+
+*/
+
 public class LoopPractice {
 
     public static void main(String[] args) {
