@@ -1,4 +1,4 @@
-package hackerRankPractice.challenge;
+package hackerRankPractice.thirtyDayChallenge;
 
 /*
 

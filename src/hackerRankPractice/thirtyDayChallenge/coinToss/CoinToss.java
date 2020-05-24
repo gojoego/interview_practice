@@ -1,4 +1,4 @@
-package hackerRankPractice.challenge.coinToss;
+package hackerRankPractice.thirtyDayChallenge.coinToss;
 
 import java.util.Random;
 

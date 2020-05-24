@@ -1,4 +1,4 @@
-package hackerRankPractice.challenge.guessTheNumber;
+package hackerRankPractice.thirtyDayChallenge.guessTheNumber;
 
 /*
 
