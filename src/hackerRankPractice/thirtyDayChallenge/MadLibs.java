@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class MadLibs {
 
     public static void main(String[] args) {
-        
+
     }
 
     Scanner scanner = new Scanner(System.in);
@@ -29,7 +29,6 @@ public class MadLibs {
     Random random = new Random();
 
     // getters and setters
-
 
     public Scanner getScanner() {
         return scanner;
