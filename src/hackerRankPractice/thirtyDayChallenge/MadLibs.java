@@ -18,6 +18,7 @@ public class MadLibs {
 
         MadLibs game = new MadLibs();
         game.printInstructions();
+        game.play();
 
     }
 
@@ -75,14 +76,24 @@ public class MadLibs {
         setAdverb(scanner.nextLine());
     }
 
-
     public void putTogetherTheStory() {
-        String story = "Jesse and her best friend " + getName() + " went to Disney World today! " +
-                "They saw a " + getNoun1() + " in a show at the Magic Kingdom " +
-                "and ate a " + getAdjective1() + " feast for dinner. The next day I " +
-                "ran " + getAdverb() + " to meet Mickey Mouse in his " + getNoun2() + "" +
-                "and then that night I gazed at the " + getRandomNumbers() + " " +
-                getAdjective2() + " fireworks shooting from the " + getNoun3() + ".";
+        String story;
+        int number = Math.abs(random.nextInt()) % 2;
+        if (number == 0) {
+            story = "Jesse and her best friend " + getName() + " went to Disney World today! " +
+                    "They saw a " + getNoun1() + " in a show at the Magic Kingdom " +
+                    "and ate a " + getAdjective1() + " feast for dinner. The next day I " +
+                    "ran " + getAdverb() + " to meet Mickey Mouse in his " + getNoun2() + "" +
+                    "and then that night I gazed at the " + getRandomNumbers() + " " +
+                    getAdjective2() + " fireworks shooting from the " + getNoun3() + ".";
+        } else {
+            story = "Amanda and her frenemy " + getName() + " went to the zoo last summer. " +
+                    "They saw a huge " + getNoun1() + " and a tiny little " + getNoun2() + ". That night" +
+                    "they decided to climb " + getAdverb() + " into the " + getNoun3() + " to get a closer look. " +
+                    "The zoo was " + getAdjective1() + "at night, they didn't care... " +
+                    "until " + getRandomNumbers() + " " + getAdjective2() + " apes yelled in their faces, making " +
+                    "Amanda and " + getName() + " spring all the way back home.";
+        }
         setStory(story);
     }
 
@@ -90,10 +101,13 @@ public class MadLibs {
         enterName();
         enterNoun1();
         enterAdjective1();
-        enterAdverb();
-        enterNoun2();
         enterAdjective2();
+        enterNoun2();
+        enterAdverb();
         enterNoun3();
+        setRandomNumbers();
+        putTogetherTheStory();
+        System.out.println(getStory());
     }
 
     // getters and setters
@@ -158,13 +172,13 @@ public class MadLibs {
         return randomNumbers;
     }
 
-    public void setRandomNumbers(String randomNumbers) {
+    public void setRandomNumbers() {
         int number = Math.abs(random.nextInt()) % 100;
         int index = 0;
         // creating an array
         // rule for arrays: each index must hold the same data type for a given instance (person, int, etc)
         int[] numberHolder = new int[3];
-        while (index < numberHolder.length){
+        while (index < numberHolder.length) {
             numberHolder[index] = number + index;
             index++;
         }
