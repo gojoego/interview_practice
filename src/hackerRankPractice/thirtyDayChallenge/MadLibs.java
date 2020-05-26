@@ -220,6 +220,9 @@ public class MadLibs {
 
 /*
 
+areas of improvement for this app:
 
+-add parser that could tell if you enter String
+-database that could tell if noun, adverb, etc
 
 */
