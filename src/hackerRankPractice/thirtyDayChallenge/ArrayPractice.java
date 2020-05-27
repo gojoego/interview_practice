@@ -1,11 +1,34 @@
 package hackerRankPractice.thirtyDayChallenge;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Random;
 
 /*
 
-array:  a container object that holds a fixed number of values that have a single data type;
-        always fixed length
+Arrays  -a container object that holds a fixed number of values that have a single data type;
+        -always fixed length
+        -declare, allocate, initialize
+        -no mixing data types in an Array
+        -changing object at index
+            1. variableName[index] = newObject
+            2. once changed, original is GONE
+        -get object at index: variableName[index]
+        -can use given java methods from the Array class
+
+When you reference an object and use ".", you can use properties and methods that go with object.
+IDE should have dropdown that shows options in which you should be able to tell properties and methods apart
+from each other. These are called instance methods and they are useful if you do not know what to do.
+
+FOR LOOPS
+for(int i = 0l i < length; i++){
+    print -> array[i]
+}
+
+FOR EACH LOOPS
+for(String s : array){
+    print -> s
+}
 
 */
 
@@ -44,6 +67,9 @@ public class ArrayPractice {
 
         // Index    0       1        2
         // Array ["bob", "sally", "max"] -> length 3
+
+        // random objects from Array
+        // Math.abs(random.nextInt()) % length;
 
         // Declaring, Allocating, Initializing Arrays
 
@@ -84,6 +110,7 @@ public class ArrayPractice {
 
         // retrieve objects
         System.out.println("value of third index in 2nd int Array: " + intArray2[3]);
+        System.out.println("using instance methods of Array object: " + Array.get(intArray2, 3));
         System.out.println();
 
         // given functions
@@ -95,6 +122,7 @@ public class ArrayPractice {
         // print String array
         System.out.println("using printArray function for Strings:");
         printArray(shoppingList);
+        System.out.println();
 
         // special for loop: foreach loop
         System.out.println("Special For Loop:");
@@ -102,6 +130,7 @@ public class ArrayPractice {
             System.out.print(s);
             System.out.print(" ");
         }
+        // do not always have to use given iterator
     }
 }
 
