@@ -33,8 +33,6 @@ Sample Output
 
 */
 
-public class Arrays {
-}
 
 class Solution7 {
 
@@ -61,27 +59,43 @@ class Solution7 {
 
 /*
 
-Data Structures
+DATA STRUCTURES
 A way of organizing data that enables efficient storage, retrieval, and use.
 
-Arrays
-A type of data structure that stores elements of the same type (generally). It's important to note that you'll often see arrays referred to as  in documentation, but the variable names you use when coding should be descriptive and begin with lowercase letters.
+ARRAYS
+A type of data structure that stores elements of the same type (generally).
+It's important to note that you'll often see arrays referred to as A in documentation,
+but the variable names you use when coding should be descriptive and begin with lowercase letters.
 
-You can think of an array, , of size  as a contiguous block of cells sequentially indexed from  to  which serve as containers for elements of the array's declared data type. To store an element, , in some index  of array , use the syntax A[i] and treat it as you would any other variable (i.e., A[i] = value;). For example, the following code:
+You can think of an array, A, of size n as a contiguous block of cells sequentially indexed from 0 to n - 1
+which serve as containers for elements of the array's declared data type. To store an element, value,
+in some index i of array A, use the syntax A[i] and treat it as you would any other variable
+(i.e., A[i] = value;). For example, consider the following code:
 
-// the number of elements we want to hold
-final int _arraySize = 4;
+*/
 
-// our array declaration
-String[] stringArray = new String[_arraySize];
+public class Arrays {
 
-for(int i = 0; i < _arraySize; i++) {
-    // assign value to index i
-    stringArray[i] = "This is stored in index " + i;
+    public void array() {
 
-    // print value saved in index i
-    System.out.println(stringArray[i]);
+        // the number of elements we want to hold
+        final int _arraySize = 4;
+
+        // our array declaration
+        String[] stringArray = new String[_arraySize];
+
+        // for loop
+        for (int i = 0; i < _arraySize; i++) {
+            // assign value to index i
+            stringArray[i] = "This is stored in index " + i;
+
+            // print value saved in index i
+            System.out.println(stringArray[i]);
+        }
+    }
 }
+/*
+
 saves and then prints the values listed below in their respective indices of :
 
 This is stored in index 0
