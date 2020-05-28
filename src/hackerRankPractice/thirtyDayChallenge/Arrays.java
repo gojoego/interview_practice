@@ -40,20 +40,34 @@ class Solution7 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+        // user scanner to get user input for Array size
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
+        // initialize int Array
         int[] arr = new int[n];
 
+        // initialize String array
         String[] arrItems = scanner.nextLine().split(" ");
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
+        // for loop to create int array
         for (int i = 0; i < n; i++) {
             int arrItem = Integer.parseInt(arrItems[i]);
             arr[i] = arrItem;
         }
 
         scanner.close();
+
+        int[] secondArray = new int[arrItems.length];
+        int j = 0;
+
+        for (int i = arr.length - 1; i >= 0; i--){
+            secondArray[j] = Integer.parseInt(arrItems[i]);
+            System.out.print(secondArray[j] + " ");
+            j++;
+        }
     }
 }
 
@@ -96,14 +110,18 @@ public class Arrays {
 }
 /*
 
-saves and then prints the values listed below in their respective indices of :
+The code above saves and then prints the values listed below in their respective indices of stringArray:
 
 This is stored in index 0
 This is stored in index 1
 This is stored in index 2
 This is stored in index 3
-Most languages also have a method, attribute, or member that allows you to retrieve the size of an array. In Java, arrays have a  attribute; in other words, you can get the length of some array, arrayName, by using the arrayName.length syntax.
 
-Note: The final keyword used in the code above is a means of protecting the variable's value by locking it to its initialized value. Any attempt to reassign (overwrite) the value of a final variable will generate an error.
+Most languages also have a method, attribute, or member that allows you to retrieve the size of an array.
+In Java, arrays have a length attribute; in other words, you can get the length of some array, arrayName,
+by using the arrayName.length syntax.
+
+Note: The final keyword used in the code above is a means of protecting the variable's value by locking
+it to its initialized value. Any attempt to reassign (overwrite) the value of a final variable will generate an error.
 
 */
