@@ -1,4 +1,4 @@
-
+package hackerRankPractice.thirtyDayChallenge;
 /*
 
 Objective
@@ -90,9 +90,10 @@ public class DictionariesAndMaps {
             String s = in.next();
             // for each query, print name=phoneNumber
             if (phoneBook.containsKey(s)){
-                phoneBook.get(s);
+                String entry = phoneBook.get(s).toString();
+                System.out.println(s + "=" + entry);
             }else{
-                System.out.println("");
+                System.out.println("Not found");
             }
 
         }
