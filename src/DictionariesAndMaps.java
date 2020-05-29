@@ -14,18 +14,22 @@ Note: Your phone book should be a Dictionary/Map/HashMap data structure.
 
 Input Format
 
-The first line contains an integer, , denoting the number of entries in the phone book.
-Each of the  subsequent lines describes an entry in the form of  space-separated values on a single line. The first value is a friend's name, and the second value is an -digit phone number.
+The first line contains an integer, n, denoting the number of entries in the phone book.
+Each of the n subsequent lines describes an entry in the form of 2 space-separated values on a single line.
+The first value is a friend's name, and the second value is an 8-digit phone number.
 
-After the  lines of phone book entries, there are an unknown number of lines of queries. Each line (query) contains a  to look up, and you must continue reading lines until there is no more input.
+After the n lines of phone book entries, there are an unknown number of lines of queries.
+Each line (query) contains a name to look up, and you must continue reading lines until there is no more input.
 
 Note: Names consist of lowercase English alphabetic letters and are first names only.
 
-Constraints
+Constraints     1 <= n <= 10^5
+                1 <= queries <= 10^5
 
 Output Format
 
-On a new line for each query, print Not found if the name has no corresponding entry in the phone book; otherwise, print the full  and  in the format name=phoneNumber.
+On a new line for each query, print Not found if the name has no corresponding entry in the phone book;
+otherwise, print the full name and phoneNumber in the format name=phoneNumber.
 
 Sample Input
 
@@ -36,17 +40,20 @@ harry 12299933
 sam
 edward
 harry
+
 Sample Output
 
 sam=99912222
 Not found
 harry=12299933
+
 Explanation
 
-We add the following  (Key,Value) pairs to our map so it looks like this:
+We add the following n = 3 (Key,Value) pairs to our map so it looks like this:
 
+phoneBook = {(sam,99912222),(tom,11122222),(harry,12299933)}
 
-We then process each query and print key=value if the queried  is found in the map; otherwise, we print Not found.
+We then process each query and print key=value if the queried key is found in the map; otherwise, we print Not found.
 
 Query 0: sam
 Sam is one of the keys in our dictionary, so we print sam=99912222.
@@ -70,14 +77,28 @@ public class DictionariesAndMaps {
 
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
+        Map<String,Integer> phoneBook = new HashMap<>();
         for (int i = 0; i < n; i++) {
             String name = in.next();
             int phone = in.nextInt();
+            // declare and initialize a new HashMap called phoneBook
+            // utilize the .put method to add pairs to the HashMap
+
+            phoneBook.put(name, phone);
         }
         while (in.hasNext()) {
             String s = in.next();
+            // for each query, print name=phoneNumber
+            if (phoneBook.containsKey(s)){
+                phoneBook.get(s);
+            }else{
+                System.out.println("");
+            }
+
         }
         in.close();
+
+
 
         /*
 
