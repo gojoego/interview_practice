@@ -70,8 +70,33 @@ public class DictionaryPractice {
         shoppingList.put("eggs", Boolean.FALSE);
         shoppingList.put("sugar", Boolean.FALSE);
 
+        // retrieve items
         System.out.println(shoppingList.get("ham"));
-        System.out.println(shoppingList.get("sugar"));
+        System.out.println(shoppingList.get("Oreos"));
+
+        // key-value pairs print out
+        System.out.println(shoppingList.toString());
+
+        // is empty?
+        System.out.println(shoppingList.isEmpty());
+
+        // remove things
+        shoppingList.remove("eggs");
+
+        // replace values for a certain key
+        shoppingList.remove("bread", Boolean.FALSE);
+
+        // key-value pairs print out
+        System.out.println(shoppingList.toString());
+
+        // clear out dictionary
+        shoppingList.clear();
+        System.out.println(shoppingList.toString());
+
+        // is empty?
+        System.out.println(shoppingList.isEmpty());
+
+
     }
 }
 
