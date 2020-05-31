@@ -4,10 +4,10 @@ package hackerRankPractice.thirtyDayChallenge;
 
 
 
-*/
+ */
 
 public class Recursion {
-}
+
 
 /*
 
@@ -18,27 +18,37 @@ which are then solved recursively until such time as they are small enough and m
 some base case; once the base case is met, the solutions for each sub-problem are
 combined and their result is the answer to the entire problem.
 
-If the base case is not met, the function's recursive case calls the function again with modified values. The code must be structured in such a way that the base case is reachable after some number of iterations, meaning that each subsequent modified value should bring you closer and closer to the base case; otherwise, you'll be stuck in the dreaded infinite loop!
+If the base case is not met, the function's recursive case calls the function again
+with modified values. The code must be structured in such a way that the base case is
+reachable after some number of iterations, meaning that each subsequent modified value
+should bring you closer and closer to the base case; otherwise, you'll be stuck in the
+dreaded infinite loop!
 
 Example
 The code below produces the multiple of two numbers by combining addition and recursion:
 
-// Multiply 'n' by 'k' using addition:
-private static int nTimesK(int n, int k) {
-    System.out.println("n: " + n);
-    // Recursive Case
-    if(n > 1) {
-        return k + nTimesK(n - 1, k);
+*/
+
+    // Multiply 'n' by 'k' using addition:
+    private static int nTimesK(int n, int k) {
+        System.out.println("n: " + n);
+        // Recursive Case
+        if (n > 1) {
+            return k + nTimesK(n - 1, k);
+        }
+        // Base Case n = 1
+        else {
+            return k;
+        }
     }
-    // Base Case n = 1
-    else {
-        return k;
+
+    public static void main(String[] args) {
+        int result = nTimesK(4, 4);
+        System.out.println("Result: " + result);
     }
 }
-public static void main(String[] args) {
-    int result = nTimesK(4, 4);
-    System.out.println("Result: " + result);
-}
+/*
+
 When executed, this code prints:
 
 n: 4
