@@ -15,6 +15,8 @@ dictionary
 -no restraints on size
 
 NOTE: order won't necessarily correspond to order input
+    -no guaranteed ordering
+
 */
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
