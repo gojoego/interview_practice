@@ -46,8 +46,8 @@ public class BinaryNumbers {
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         scanner.close();
-    }
 
+    }
 
 }
 
@@ -101,4 +101,67 @@ you can use the Integer.toBinaryString(n) function.
 Note: The algorithm discussed here is for converting integers;
 converting fractional numbers is a similar (but different) process.
 
+boolean
+-true   1
+-false  0
+
+digits 0 to 9: base 10
+
+
+
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
