@@ -3,7 +3,7 @@ package hackerRankPractice.thirtyDayChallenge;
 /*
 
 Objective
-Today, we're working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!
+Today, we're working with binary numbers.
 
 Task
 Given a base- integer, , convert it to binary (base-). Then find and print the base- integer denoting the maximum number of consecutive 's in 's binary representation.
@@ -40,7 +40,19 @@ The binary representation of  is , so the maximum number of consecutive 's is .
 
 */
 
+import java.util.Scanner;
+
 public class BinaryNumbers {
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        scanner.close();
+    }
+
+
 }
 
 /*
