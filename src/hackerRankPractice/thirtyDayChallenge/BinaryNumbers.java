@@ -6,37 +6,33 @@ Objective
 Today, we're working with binary numbers.
 
 Task
-Given a base- integer, , convert it to binary (base-). Then find and print the base- integer denoting the maximum number of consecutive 's in 's binary representation.
+Given a base-10 integer, n, convert it to binary (base-2).
+Then find and print the base-10 integer denoting the maximum
+number of consecutive 1's in n's binary representation.
 
 Input Format
 
-A single integer, .
+A single integer, n.
 
-Constraints
+Constraints     1 <= n <= 10^6
 
 Output Format
 
-Print a single base- integer denoting the maximum number of consecutive 's in the binary representation of .
+Print a single base-10 integer denoting the maximum number of consecutive 1's in the binary representation of n.
 
-Sample Input 1
+Sample Input 1: 5
+Sample Output 1: 1
 
-5
-Sample Output 1
+Sample Input 2: 13
+Sample Output 2: 2
 
-1
-Sample Input 2
-
-13
-Sample Output 2
-
-2
 Explanation
 
 Sample Case 1:
-The binary representation of  is , so the maximum number of consecutive 's is .
+The binary representation of 5 is 101, so the maximum number of consecutive 1's is 1.
 
 Sample Case 2:
-The binary representation of  is , so the maximum number of consecutive 's is .
+The binary representation of 13 is 1101, so the maximum number of consecutive 1's is 2.
 
 */
 
@@ -57,25 +53,39 @@ public class BinaryNumbers {
 
 /*
 
-Radix (Base)
-The number of digits that can be used to represent a number in a positional number system. The decimal number system (base-) has  digits (); the binary (base-) number system has  digits ().
+RADIX (BASE)
+The number of digits that can be used to represent a number in a positional number system.
+The decimal number system (base-10) has  digits (0,1,2,3,4,5,6,7,8,9);
+the binary (base-2) number system has 2 digits (0,1).
 
-We think in terms of base-, because the decimal number system is the only one many people need in everyday life. For situations where there is a need to specify a number's radix, number  having radix  should be written as .
+We think in terms of base-10, because the decimal number system is the only one many people need in everyday life.
+For situations where there is a need to specify a number's radix, number n having radix r should be written as (n)r.
 
-Binary to Decimal Conversion
-In the same way that , a binary number having  digits in the form of  can be converted to decimal by summing the result for each  where ,  is the most significant bit, and  is the least significant bit.
+BINARY TO DECIMAL CONVERSION
+In the same way that (840)10 = (8x10^2)+(4x10^1)+(0x10^0) = 800+40+0 = 840,
+a binary number having k digits in the form of dk-1dk-2...d2d1d0 can be converted to
+decimal by summing the result for each di x 2^i where 0 <= i <= k-1, i=k-1 is the most significant bit,
+and i=0 is the least significant bit.
 
-For example:  is evaluated as
+For example: (1011)2 -> (?)10 is evaluated as (1x2^3)+(0x2^2)+(1x2^0)+(1x2^0) = 8 _l_ 0 _l_ 2 _l_ 1 = (11)10
 
-Decimal to Binary Conversion
-To convert an integer from decimal to binary, repeatedly divide your base- number, , by . The dividend at each step  should be the result of the integer division at each step . The remainder at each step of division is a single digit of the binary equivalent of ; if you then read each remainder in order from the last remainder to the first (demonstrated below), you have the entire binary number.
+DECIMAL TO BINARY CONVERSION
+To convert an integer from decimal to binary, repeatedly divide your base-10 number, n, by 2.
+The dividend at each step i should be the result of the integer division at each step i-1.
+The remainder at each step of division is a single digit of the binary equivalent of n;
+if you then read each remainder in order from the last remainder to the first (demonstrated below),
+you have the entire binary number.
 
-For example: . After performing the steps outlined in the above paragraph, the remainders form  (the binary equivalent of ) when read from the bottom up:
+For example: (4)10 -> (?)2. After performing the steps outlined in the above paragraph,
+the remainders form (100)2 (the binary equivalent of (4)10) when read from the bottom up:
+                    ^
+4/2 = 2 remainder 0 |
+                    ^
+2/2 = 1 remainder 0 |
+                    ^
+1/2 = 0 remainder 1 |
 
-
-
-
-This can be expressed in pseudocode as:
+This can be expressed in pseudo-code as:
 
 while(n > 0):
     remainder = n%2;
@@ -83,8 +93,12 @@ while(n > 0):
     Insert remainder to front of a list or push onto a stack
 
 Print list or stack
-Many languages have built-in functions for converting numbers from decimal to binary. To convert an integer, , from decimal to a String of binary numbers in Java, you can use the Integer.toBinaryString(n) function.
 
-Note: The algorithm discussed here is for converting integers; converting fractional numbers is a similar (but different) process.
+Many languages have built-in functions for converting numbers from decimal to binary.
+To convert an integer, N, from decimal to a String of binary numbers in Java,
+you can use the Integer.toBinaryString(n) function.
+
+Note: The algorithm discussed here is for converting integers;
+converting fractional numbers is a similar (but different) process.
 
 */
