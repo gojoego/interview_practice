@@ -4,7 +4,7 @@ package hackerRankPractice.thirtyDayChallenge;
 
 
 
- */
+*/
 
 public class Recursion {
 
@@ -47,6 +47,7 @@ The code below produces the multiple of two numbers by combining addition and re
         System.out.println("Result: " + result);
     }
 }
+
 /*
 
 When executed, this code prints:
@@ -55,14 +56,80 @@ n: 4
 n: 3
 n: 2
 n: 1
+
 Result: 16
-The diagram below depicts the execution of the code above. Each call to  is represented by a bubble, and each new recursive call bubble is stacked inside and on top of the bubble that was responsible for calling it. The function recursively calls itself using reduced values until it reaches the base case (). Once it reaches the base case, it passes back the base case's return value () to the bubble that called it and continues passing back k + the previously returned value until the final result (i.e.: the multiplication by addition result of ) is returned.
 
-Recursion 2.png
+The diagram below depicts the execution of the code above.
+Each call to nTimesK is represented by a bubble, and each new recursive call bubble
+is stacked inside and on top of the bubble that was responsible for calling it.
+The function recursively calls itself using reduced values until it reaches the
+base case (n = 1). Once it reaches the base case, it passes back the base case's
+return value (k = 4) to the bubble that called it and continues passing back k +
+the previously returned value until the final result (i.e.: the multiplication
+by addition result of n x k) is returned.
 
-Once the code hits the base case in the  bubble, it returns  (which is ) to the  bubble.
-Then the  bubble returns , which is , to the  bubble.
-Then the  bubble returns , which is , to the  bubble.
-Then the  bubble returns , which is , to the first line in main as the result for , which assigns  to the  variable.
+Once the code hits the base case in the 4th bubble, it returns k (which is 4)
+to the 3rd bubble.
+Then the 3rd bubble returns k + 4, which is 8, to the 2nd bubble.
+Then the 2nd bubble returns k + 8, which is 12, to the 1st bubble.
+Then the 1st bubble returns k + 12, which is 16, to the first line in main as
+the result for nTimesK(4,4), which assigns 16 to the result variable.
+
+What is recursion?
+
+The process of defining a function or calculating a number by the repeated application of an algorithm
+
+recursion consists of:
+
+1. base case: when we stop repeating our algorithm
+2. recursive case: repeating the algorithm
+
+
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
