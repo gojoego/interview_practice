@@ -50,7 +50,7 @@ public class RecursionGoodLuck {
 
     // 5^3 = 5 * 5 * 5
     // 5^3 = 5 * 5^2 = 5 * 5 * 5^1 = 5 * 5 * 5 * 5^0 = 5 * 5 * 5 * 1
-    public static int exponentiation(int n, int p) {
+    public static int Exponentiation(int n, int p) {
         // base case
         if (p <= 0) {
             return 1; // multiplicative identity
@@ -62,14 +62,18 @@ public class RecursionGoodLuck {
             // 5 * 5 * exponentiation(5,1)
             // 5 * 5 * 5 * exponentiation(5,0)
             // 5 * 5 * 5 * 1
-            return n * exponentiation(n,p-1);
+            return n * Exponentiation(n,p-1);
         }
     }
 
     public static void main(String[] args) {
-
+        int summation = Summation(3);
+        int factorial = Factorial(4);
+        int exponentiation = Exponentiation(5,4);
+        System.out.println(summation);
+        System.out.println(factorial);
+        System.out.println(exponentiation);
     }
-
 }
 
 
