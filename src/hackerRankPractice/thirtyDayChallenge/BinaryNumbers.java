@@ -46,10 +46,23 @@ public class BinaryNumbers {
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         scanner.close();
-
+        int rem, s = 0, t = 0;
+        while (n > 0) {
+            rem = n % 2;
+            n = n / 2;
+            if (rem == 1) {
+                s++;
+                if (s >= t)
+                    t = s;
+            } else {
+                s = 0;
+            }
+        }
+        System.out.println(t);
     }
-
 }
+
+
 
 /*
 
@@ -107,7 +120,26 @@ boolean
 
 digits 0 to 9: base 10
 
+0       0
+1       1
+2       10
+3       11
+4       100
+5       101
+6       110
+7       111
+8       1000
+9       1001
+10      1010
+11      1011
+12      1100
+13      1101
+14      1110
+15      1111
 
+7+7= 14      111
+            +111
+            1110
 
 */
 
