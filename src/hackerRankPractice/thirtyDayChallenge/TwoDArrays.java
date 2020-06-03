@@ -3,7 +3,7 @@ package hackerRankPractice.thirtyDayChallenge;
 /*
 
 Objective
-Today, we're building on our knowledge of Arrays by adding another dimension. Check out the Tutorial tab for learning materials and an instructional video!
+Today, we're building on our knowledge of Arrays by adding another dimension.
 
 Context
 Given a  2D Array, :
@@ -72,19 +72,26 @@ The hourglass with the maximum sum () is:
 */
 
 public class TwoDArrays {
-}
+
+
 
 /*
 
 2D Arrays
-Also known as multidimensional arrays, they are very similar to the regular 1D Array data structure we've already discussed.
+Also known as multidimensional arrays, they are very similar to the regular 1D Array data
+structure we've already discussed.
 
 Consider the following code:
 
-int rowSize = 2;
-int colSize = 4;
-int[][] myArray = new int[rowSize][colSize];
-This creates a  matrix where each element, , can be graphically represented as follows:
+*/
+
+    int rowSize = 2;
+    int colSize = 4;
+    int[][] myArray = new int[rowSize][colSize];
+
+/*
+
+This creates a 2x4 matrix where each element, , can be graphically represented as follows:
 
 (0, 0) (0, 1) (0, 2) (0, 3)
 (1, 0) (1, 1) (1, 2) (1, 3)
@@ -102,6 +109,7 @@ for(int i = 0; i < rowSize; i++) {
 }
 If we print the contents of each row:
 
+/*
 for(int i = 0; i < rowSize; i++) {
 
     // print the row of space-separated values
@@ -111,6 +119,12 @@ for(int i = 0; i < rowSize; i++) {
     // end of row is reached, print newline
     System.out.println();
 }
+
+
+ */
+}
+
+/*
 we'll see the following output:
 
 0 1 2 3
