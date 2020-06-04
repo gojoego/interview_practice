@@ -26,10 +26,6 @@ import java.util.Map;
 
 public class LibraryCatalogue {
 
-    public static void main(String[] args) {
-
-    }
-
     // properties/fields/global variables
     Map<String,Book> bookCollection = new HashMap<String,Book>();
     int currentDay = 0;
@@ -37,6 +33,63 @@ public class LibraryCatalogue {
     double initialLateFee = 0.50;
     double feePerLateDay = 1.00;
 
+    // constructors
+    public LibraryCatalogue(Map<String,Book> collection){
+        this.bookCollection = collection;
+    }
+
+    public LibraryCatalogue(Map<String,Book> collection, int lengthOfCheckoutPeriod, double initialLateFee, double feePerLateDay){
+        this.bookCollection = collection;
+        this.lengthOfCheckoutPeriod = lengthOfCheckoutPeriod;
+        this.initialLateFee = initialLateFee;
+        this.feePerLateDay = feePerLateDay;
+    }
+
+    // getters and setters
+    
+    public Map<String, Book> getBookCollection() {
+        return bookCollection;
+    }
+
+    public void setBookCollection(Map<String, Book> bookCollection) {
+        this.bookCollection = bookCollection;
+    }
+
+    public int getCurrentDay() {
+        return currentDay;
+    }
+
+    public void setCurrentDay(int currentDay) {
+        this.currentDay = currentDay;
+    }
+
+    public int getLengthOfCheckoutPeriod() {
+        return lengthOfCheckoutPeriod;
+    }
+
+    public void setLengthOfCheckoutPeriod(int lengthOfCheckoutPeriod) {
+        this.lengthOfCheckoutPeriod = lengthOfCheckoutPeriod;
+    }
+
+    public double getInitialLateFee() {
+        return initialLateFee;
+    }
+
+    public void setInitialLateFee(double initialLateFee) {
+        this.initialLateFee = initialLateFee;
+    }
+
+    public double getFeePerLateDay() {
+        return feePerLateDay;
+    }
+
+    public void setFeePerLateDay(double feePerLateDay) {
+        this.feePerLateDay = feePerLateDay;
+    }
+
+    public static void main(String[] args) {
+
+    }
 }
 
 /*
