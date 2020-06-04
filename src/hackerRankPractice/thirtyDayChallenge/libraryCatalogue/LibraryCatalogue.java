@@ -46,9 +46,21 @@ public class LibraryCatalogue {
     }
 
     // getters and setters
-    
+
+    public void nextDay(){
+        currentDay++;
+    }
+
+    public void setDay(int day){
+        currentDay = day;
+    }
+
     public Map<String, Book> getBookCollection() {
-        return bookCollection;
+        return this.bookCollection;
+    }
+
+    public Book getBook(String bookTitle){
+        return getBookCollection().get(bookTitle);
     }
 
     public void setBookCollection(Map<String, Book> bookCollection) {
@@ -56,7 +68,7 @@ public class LibraryCatalogue {
     }
 
     public int getCurrentDay() {
-        return currentDay;
+        return this.currentDay;
     }
 
     public void setCurrentDay(int currentDay) {
@@ -64,7 +76,7 @@ public class LibraryCatalogue {
     }
 
     public int getLengthOfCheckoutPeriod() {
-        return lengthOfCheckoutPeriod;
+        return this.lengthOfCheckoutPeriod;
     }
 
     public void setLengthOfCheckoutPeriod(int lengthOfCheckoutPeriod) {
@@ -72,7 +84,7 @@ public class LibraryCatalogue {
     }
 
     public double getInitialLateFee() {
-        return initialLateFee;
+        return this.initialLateFee;
     }
 
     public void setInitialLateFee(double initialLateFee) {
@@ -80,11 +92,32 @@ public class LibraryCatalogue {
     }
 
     public double getFeePerLateDay() {
-        return feePerLateDay;
+        return this.feePerLateDay;
     }
 
     public void setFeePerLateDay(double feePerLateDay) {
         this.feePerLateDay = feePerLateDay;
+    }
+
+    // instance methods
+
+    public void checkOutBook(String title){
+        Book book = getBook(title);
+        if (book.getIsCheckedOut()){
+            sorryBookAlreadyCheckedOut(book);
+        } else {
+            book.setIsCheckedOut(true, currentDay);
+            System.out.println("You just checked out " + title + ". It is due" +
+                    "on day " + (getCurrentDay() + getLengthOfCheckoutPeriod()) + ".");
+        }
+    }
+
+    public void returnBook(String title){
+
+    }
+
+    public void sorryBookAlreadyCheckedOut(Book book){
+
     }
 
     public static void main(String[] args) {
@@ -108,3 +141,25 @@ book class
 4. what defines a book
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
