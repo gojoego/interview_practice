@@ -28,9 +28,12 @@ public class Book {
         this.dayCheckedOut = dayCheckedOut;
     }
 
-    // getters and setters 
+    // getters and setters
+    // getters: instance methods
+    // setters:
+
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -38,7 +41,7 @@ public class Book {
     }
 
     public int getPageCount() {
-        return pageCount;
+        return this.pageCount;
     }
 
     public void setPageCount(int pageCount) {
@@ -46,26 +49,27 @@ public class Book {
     }
 
     public int getISBN() {
-        return ISBN;
+        return this.ISBN;
     }
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
     }
 
-    public boolean isCheckedOut() {
-        return isCheckedOut;
+    public boolean getIsCheckedOut() {
+        return this.isCheckedOut;
     }
 
-    public void setCheckedOut(boolean checkedOut) {
-        isCheckedOut = checkedOut;
+    public void setIsCheckedOut(boolean newIsCheckedOut, int currentDayCheckedOut) {
+        this.isCheckedOut = newIsCheckedOut;
+        setDayCheckedOut(currentDayCheckedOut);
     }
 
     public int getDayCheckedOut() {
-        return dayCheckedOut;
+        return this.dayCheckedOut;
     }
 
-    public void setDayCheckedOut(int dayCheckedOut) {
-        this.dayCheckedOut = dayCheckedOut;
+    public void setDayCheckedOut(int day) {
+        this.dayCheckedOut = day;
     }
 }

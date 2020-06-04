@@ -11,9 +11,32 @@ What's in a catalog?
 5. is a given book returned late?
 6. is a book checked out?
 
+Library Properties
+
+1. book collection
+2. current day
+3. length of check out period
+4. initial late fee
+5. per day late fee
+
 */
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LibraryCatalogue {
+
+    public static void main(String[] args) {
+
+    }
+
+    // properties/fields/global variables
+    Map<String,Book> bookCollection = new HashMap<String,Book>();
+    int currentDay = 0;
+    int lengthOfCheckoutPeriod = 7;
+    double initialLateFee = 0.50;
+    double feePerLateDay = 1.00;
+
 }
 
 /*
