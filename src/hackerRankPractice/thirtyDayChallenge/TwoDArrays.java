@@ -105,7 +105,13 @@ public class TwoDArrays {
         }
         scanner.close();
         // sum each hourglass
+        // method that sums up an hourglass
         // print the largest sum
+        // create an int array
+
+        // i = 0
+        // j = 0
+        //
     }
 
 /*
