@@ -27,18 +27,18 @@ import java.util.Map;
 public class LibraryCatalogue {
 
     // properties/fields/global variables
-    Map<String,Book> bookCollection = new HashMap<String,Book>();
+    Map<String, Book> bookCollection = new HashMap<String, Book>();
     int currentDay = 0;
     int lengthOfCheckoutPeriod = 7;
     double initialLateFee = 0.50;
     double feePerLateDay = 1.00;
 
     // constructors
-    public LibraryCatalogue(Map<String,Book> collection){
+    public LibraryCatalogue(Map<String, Book> collection) {
         this.bookCollection = collection;
     }
 
-    public LibraryCatalogue(Map<String,Book> collection, int lengthOfCheckoutPeriod, double initialLateFee, double feePerLateDay){
+    public LibraryCatalogue(Map<String, Book> collection, int lengthOfCheckoutPeriod, double initialLateFee, double feePerLateDay) {
         this.bookCollection = collection;
         this.lengthOfCheckoutPeriod = lengthOfCheckoutPeriod;
         this.initialLateFee = initialLateFee;
@@ -47,11 +47,11 @@ public class LibraryCatalogue {
 
     // getters and setters
 
-    public void nextDay(){
+    public void nextDay() {
         currentDay++;
     }
 
-    public void setDay(int day){
+    public void setDay(int day) {
         currentDay = day;
     }
 
@@ -59,7 +59,7 @@ public class LibraryCatalogue {
         return this.bookCollection;
     }
 
-    public Book getBook(String bookTitle){
+    public Book getBook(String bookTitle) {
         return getBookCollection().get(bookTitle);
     }
 
@@ -101,9 +101,9 @@ public class LibraryCatalogue {
 
     // instance methods
 
-    public void checkOutBook(String title){
+    public void checkOutBook(String title) {
         Book book = getBook(title);
-        if (book.getIsCheckedOut()){
+        if (book.getIsCheckedOut()) {
             sorryBookAlreadyCheckedOut(book);
         } else {
             book.setIsCheckedOut(true, currentDay);
@@ -112,12 +112,23 @@ public class LibraryCatalogue {
         }
     }
 
-    public void returnBook(String title){
-
+    public void returnBook(String title) {
+        Book book = getBook(title);
+        int daysLate = currentDay - (book.getDayCheckedOut() + getLengthOfCheckoutPeriod());
+        if (daysLate > 0) {
+            System.out.println("You owe the library $" + (getInitialLateFee() +
+                    daysLate * getFeePerLateDay()
+                    + " because your book is " + daysLate + "days overdue."));
+        } else {
+            System.out.println("Book Returned. Thank you.");
+        }
+        book.setIsCheckedOut(false, -1);
     }
 
-    public void sorryBookAlreadyCheckedOut(Book book){
-
+    public void sorryBookAlreadyCheckedOut(Book book) {
+        System.out.println("Sorry, " + book.getTitle() + " is already checked out. " +
+                "It should be back on day " + (book.getDayCheckedOut() +
+                getLengthOfCheckoutPeriod() + "."));
     }
 
     public static void main(String[] args) {
