@@ -15,7 +15,8 @@ public class HackerRankHatch {
                     }
                 }
             }
-        } //tests for behavior 
+        } //tests for behavior
+        return number;
     }
 
 
