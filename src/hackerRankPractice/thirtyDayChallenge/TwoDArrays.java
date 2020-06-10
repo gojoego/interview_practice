@@ -104,14 +104,20 @@ public class TwoDArrays {
             }
         }
         scanner.close();
-        // sum each hourglass
-        // method that sums up an hourglass
-        // print the largest sum
-        // create an int array
 
-        // i = 0
-        // j = 0
-        //
+
+        int sum = -10000;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int currentSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+                        + arr[i + 1][j + 1]
+                        + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                if (currentSum > sum) {
+                    sum = currentSum;
+                }
+            }
+        }
+        System.out.println(sum);
     }
 
 /*
@@ -155,11 +161,11 @@ Consider the following code:
         }
     }
 
-/*
+    /*
 
-If we print the contents of each row:
+    If we print the contents of each row:
 
-*/
+    */
     public void nestedLoopingPrinting() {
         for (int i = 0; i < rowSize; i++) {
             // print the row of space-separated values
