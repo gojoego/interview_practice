@@ -94,10 +94,10 @@ public class ClassVsInstance {
 }
 
 
-class Person {
+class Person1 {
     private int age;
 
-    public Person(int initialAge) {
+    public Person1(int initialAge) {
         // Add some more code to run some checks on initialAge
         if (initialAge > 0){
             this.age = initialAge;
@@ -128,7 +128,7 @@ class Person {
         int T = sc.nextInt();
         for (int i = 0; i < T; i++) {
             int age = sc.nextInt();
-            Person p = new Person(age);
+            Person1 p = new Person1(age);
             p.amIOld();
             for (int j = 0; j < 3; j++) {
                 p.yearPasses();

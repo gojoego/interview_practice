@@ -64,6 +64,9 @@ An average grade of 90 corresponds to the letter grade O, so our calculate() met
 
 */
 
+class Person {
+
+}
 
 
 public class Inheritance {
