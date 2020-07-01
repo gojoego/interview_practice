@@ -72,21 +72,21 @@ class Person {
     protected int idNumber;
 
     // constructor
-    Person(String firstName, String lastName, int identification){
+    Person(String firstName, String lastName, int identification) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.idNumber = identification;
     }
 
     // print person data
-    public void printPerson(){
+    public void printPerson() {
         System.out.println("Name: " + lastName + ", " + firstName
-                + 	"\nID: " + idNumber);
+                + "\nID: " + idNumber);
     }
 
 }
 
-class Student extends Person{
+class Student extends Person {
     private int[] testScores;
 
     /*
@@ -98,12 +98,37 @@ class Student extends Person{
      *   @param scores - An array of integers denoting the Person's test scores.
      */
     // Write your constructor here
+    Student(String firstName, String lastName, int id, int[] scores) {
+        super(firstName, lastName, id);
+        this.testScores = scores;
+    }
 
     /*
      *   Method Name: calculate
      *   @return A character denoting the grade.
      */
     // Write your method here
+    public String calculate() {
+        int average = 0;
+        // add scores together
+        for (int i = 0; i < testScores.length; i++) {
+            average = average + testScores[i];
+        }
+        average = average / testScores.length;
+        if (average >= 90) {
+            return "O"; // outstanding
+        } else if (average >= 80) {
+            return "E"; // excellent
+        } else if (average >= 70) {
+            return "A"; // average
+        } else if (average >= 55) {
+            return "P"; // poor
+        } else if (average >= 40) {
+            return "D"; // damn
+        } else {
+            return "T"; // tough
+        }
+    }
 }
 
 
@@ -116,7 +141,7 @@ public class Inheritance {
         int id = scan.nextInt();
         int numScores = scan.nextInt();
         int[] testScores = new int[numScores];
-        for (int i = 0; i < numScores; i++){
+        for (int i = 0; i < numScores; i++) {
             testScores[i] = scan.nextInt();
         }
         scan.close();
