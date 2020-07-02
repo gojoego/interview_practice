@@ -24,6 +24,11 @@ types of packages
 
 * import al needed packages except java.lang
 
+import pkg1.pkg2.class
+import pkg1.pkg2.*
+import pkg1.*
+
+
 */
 
 public class CalendarPractice {

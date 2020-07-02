@@ -123,7 +123,7 @@ type casting
 
 scope = lifetime and accessibility of a variable
 
-4 levels of scope 
+4 levels of scope
 -class
 -method
 -public vs private
