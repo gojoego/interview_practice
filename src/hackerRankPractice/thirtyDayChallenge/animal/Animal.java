@@ -33,6 +33,14 @@ public abstract class Animal {
         System.out.println("An animal has been created!");
     }
 
+    // HAPPY = 10
+    // f(x) = x + 5 + HAPPY
+    // f(z,d) = z + d + HAPPY
+    // where something is declared is where something lives
+    public void doSomething (String thing){
+        System.out.println("I'm doing " + thing);
+    }
+
     public abstract void eat();
 
     public void sleep(){
@@ -112,5 +120,14 @@ abstract classes vs. overriding methods:
 
 type casting
 -casting: converting data type to another data type
+
+scope = lifetime and accessibility of a variable
+
+4 levels of scope 
+-class
+-method
+-public vs private
+-loop
+
 
 */
