@@ -3,32 +3,32 @@ package hackerRankPractice.thirtyDayChallenge.linkedList;
 // node holds data and reference to next node
 
 // define node
-public class Node {
+public class Node1 {
 
     // properties
-    Node next;
+    Node1 next;
     int data;
 
     // methods
 
     // constructors
-    public Node(int newData){
+    public Node1(int newData){
         data = newData;
         next = null;
     }
 
-    public Node(int newData, Node newNext){
+    public Node1(int newData, Node1 newNext){
         data = newData;
         next = newNext;
     }
 
     // getters and setters
 
-    public Node getNext() {
+    public Node1 getNext() {
         return next;
     }
 
-    public void setNext(Node newNode) {
+    public void setNext(Node1 newNode1) {
         this.next = next;
     }
 
