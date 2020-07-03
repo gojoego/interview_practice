@@ -43,16 +43,67 @@ Sample Output
 
 Explanation
 
-The scope of the elements array and maximumDifference integer is the entire class instance. The class constructor saves the argument passed to the constructor as the  instance variable (where the computeDifference method can access it).
+The scope of the elements array and maximumDifference integer is the entire class instance.
+The class constructor saves the argument passed to the constructor as the elements instance variable
+(where the computeDifference method can access it).
 
-To find the maximum difference, computeDifference checks each element in the array and finds the maximum difference between any  elements:
+To find the maximum difference, computeDifference checks each element in the array and
+finds the maximum difference between any 2 elements: |1-2|=1
+    |1-5|=4
+    |2-5|=3
 
-
-The maximum of these differences is , so it saves the value  as the  instance variable. The locked stub code in the editor then prints the value stored as , which is .
+The maximum of these differences is 4, so it saves the value 4 as the maximumDifference instance variable.
+The locked stub code in the editor then prints the value stored as maximumDifference, which is 4.
 
 */
 
+import java.util.Scanner;
+
+class Difference {
+    private int[] elements;
+    public int maximumDifference;
+
+    // add your code here
+
+
+    public Difference(int[] elements) {
+        this.elements = elements;
+    }
+
+    public void computeDifference() {
+        int max = 1;
+        int min = 100;
+        for (int element: elements){
+            if (element < min){
+                min = element;
+            }
+            if (element > max){
+                max = element;
+            }
+        }
+        this.maximumDifference = Math.abs(max-min);
+    }
+    // end of Difference class
+}
+
 public class Scope {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++){
+            a[i] = sc.nextInt();
+        }
+        sc.close();
+
+        Difference difference = new Difference(a);
+
+        difference.computeDifference();
+
+        System.out.println(difference.maximumDifference);
+    }
+
 }
 
 /*
