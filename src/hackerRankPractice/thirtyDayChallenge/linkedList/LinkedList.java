@@ -35,8 +35,6 @@ what do we need?
 -retrieve nodes(data in nodes)
 
 CHALLENGE
-Objective
-Today we're working with Linked Lists. Check out the Tutorial tab for learning materials and an instructional video!
 
 A Node class is provided for you in the editor. A Node object has an integer data field, , and a Node instance pointer, , pointing to another node (i.e.: the next node in a list).
 
@@ -121,16 +119,33 @@ public class LinkedList {
             return -1; // better to throw an exception, should equal null
         }
         Node current = head;
+        // starting at 1 because starting count at 1
         for (int i = 1; i < index; i++){
-            
+            current = current.getNext();
         }
+        return current.getData();
     }
 
     // size
+    public int size(){
+        return count;
+    }
 
     // isEmpty
+    public boolean isEmpty(){
+        return head == null;
+    }
 
     // remove
+    public void move(){
+        // remove from back of list
+        Node current = head;
+        while (current.getNext().getNext() != null){
+            current = current.getNext();
+        }
+        current.setNext(null);
+        count--;
+    }
 
     public static void main(String[] args) {
 
