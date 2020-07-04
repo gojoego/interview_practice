@@ -39,7 +39,16 @@ public class Exceptions {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String s = in.next();
-        
+        // try
+        // convert String to integer using Integer.parseInt(token)
+        try{
+            System.out.println(Integer.parseInt(s));
+        }
+        // catch
+        // print "Bad String"
+        catch (NumberFormatException n){
+            System.out.println("Bad String");
+        }
     }
 }
 
