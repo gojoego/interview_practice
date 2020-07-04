@@ -50,7 +50,19 @@ try {
     do this until we get an exception
 } catch (type_of_error e){
     do this if we get type_of_error in the try
+} finally {
+    do this no matter what
 }
+
+try-catch block are useful when...
+-you are not sure if your output will throw an exception
+-you want to safe-guard against bad inputs
+
+* can have multiple catch blocks for certain try
+* want something to execute no matter what: use finally clause
+
+try-catch-finally block
+-allows us to let program TRY to do something
 
 */
 
@@ -59,10 +71,14 @@ public class ExceptionsPractice {
     public static void main(String[] args) {
         try{
             int[] c = new int[5];
+            // arrays initialized to be zero
             System.out.println("Element 6 at index 5 = " + c[5]);
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Exception thrown " + e);
         }
-        System.out.println("Finally Finished try-catch");
+        finally {
+            System.out.println("Finally clause");
+        }
+//        System.out.println("Finally Finished try-catch")
     }
 }
