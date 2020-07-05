@@ -41,29 +41,44 @@ we can do something about the errors
 
 */
 
+import java.util.concurrent.TimeUnit;
+
 public class HotChocolate {
 
     public static final double tooHot = 185;
     public static final double tooCold = 160;
 
-    public static void drinkHotChocolate(double cocoaTemp) throws TooColdException, TooHotException{
+    public static void drinkHotChocolate(double cocoaTemp) throws TooColdException, TooHotException {
         // throws = says when method called there is try catch at method above
-        if (cocoaTemp >= tooHot){
+        if (cocoaTemp >= tooHot) {
             throw new TooHotException();
-        } else if (cocoaTemp <= tooCold){
+        } else if (cocoaTemp <= tooCold) {
             throw new TooColdException();
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+//        double currentCocoaTemp = 170;
+//        double currentCocoaTemp = 100;
+//        double currentCocoaTemp = 200;
+//        double currentCocoaTemp = 150;
         double currentCocoaTemp = 170;
-        try{
-            drinkHotChocolate(currentCocoaTemp);
-            System.out.println("That cocoa was good!");
-        } catch (TooHotException e1){
-            System.out.println("That's too hot!");
-        } catch (TooColdException e2){
-            System.out.println("That's so cold! It's like the arctic.");
+
+        boolean wrongTemp = true;
+        while (wrongTemp) {
+            try {
+                drinkHotChocolate(currentCocoaTemp);
+                System.out.println("That cocoa was good!");
+                wrongTemp = false;
+            } catch (TooHotException e1) {
+                System.out.println("That's too hot!");
+                currentCocoaTemp = currentCocoaTemp - 5;
+            } catch (TooColdException e2) {
+                System.out.println("That's so cold! It's like the arctic.");
+                currentCocoaTemp = currentCocoaTemp + 5;
+            }
+            TimeUnit.SECONDS.sleep(2);
         }
+        System.out.println("And it's gone.");
     }
 }
