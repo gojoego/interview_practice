@@ -1,4 +1,4 @@
 package hackerRankPractice.thirtyDayChallenge.hotChocolate;
 
-public class TooHotException {
+public class TooHotException extends TemperatureException {
 }

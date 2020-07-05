@@ -26,9 +26,44 @@ java's exceptions only arise if there are...
 1. syntax errors
 2. logic errors/bad access errors
 
+but what if something else is wrong?
 
+back to example:
+1. create park via code
+2. always want # of trees > 0
+3. if this isn't the case, we want to know that as the program
+
+we can do something about the errors
+1. change invalid value in program to value that is valid
+2. plant more trees if number of trees below valid value
+
+* many errors in Java but we can also create our own types of exceptions
 
 */
 
 public class HotChocolate {
+
+    public static final double tooHot = 185;
+    public static final double tooCold = 160;
+
+    public static void drinkHotChocolate(double cocoaTemp) throws TooColdException, TooHotException{
+        // throws = says when method called there is try catch at method above
+        if (cocoaTemp >= tooHot){
+            throw new TooHotException();
+        } else if (cocoaTemp <= tooCold){
+            throw new TooColdException();
+        }
+    }
+
+    public static void main(String[] args) {
+        double currentCocoaTemp = 170;
+        try{
+            drinkHotChocolate(currentCocoaTemp);
+            System.out.println("That cocoa was good!");
+        } catch (TooHotException e1){
+            System.out.println("That's too hot!");
+        } catch (TooColdException e2){
+            System.out.println("That's so cold! It's like the arctic.");
+        }
+    }
 }
