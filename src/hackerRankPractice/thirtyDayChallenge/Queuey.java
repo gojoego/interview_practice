@@ -28,6 +28,8 @@ what is in a queue?
 */
 
 import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Queuey {
 
@@ -76,16 +78,33 @@ public class Queuey {
 //        System.out.println("Second out: " + numberQueue.dequeue());
 //        System.out.println("Third out: " + numberQueue.dequeue());
 
-        Queuey stringQueue = new Queuey();
-        stringQueue.enqueue("hi");
-        stringQueue.enqueue("there");
-        System.out.print(stringQueue.dequeue() + " ");
-        System.out.print(stringQueue.dequeue() + ".");
+//        Queuey stringQueue = new Queuey();
+//        stringQueue.enqueue("hi");
+//        stringQueue.enqueue("there");
+//        System.out.print(stringQueue.dequeue() + " ");
+//        System.out.print(stringQueue.dequeue() + ".");
+
+        // when working with data structures, will want one data type
+        Stack<String> stacky = new Stack<>();
+        stacky.push("there");
+        stacky.push("hi");
+        System.out.println(stacky.pop() + " ");
+        System.out.println("Peek: " + stacky.peek());
+        System.out.println(stacky.pop() + "! ");
+        System.out.println("Size: " + stacky.size());
+
     }
 }
 
 /*
 
+stacks:
+    behavior: LIFO
+    -last in, first out
+    -push: adding things to stack
+    -pop: removing from stack
+    -can you implement with linked list?
+    -already built into Java
 
 */
 
