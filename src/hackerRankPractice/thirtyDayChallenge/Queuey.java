@@ -106,6 +106,27 @@ stacks:
     -can you implement with linked list?
     -already built into Java
 
+traversing data structures
+-only way to traverse stack or queue is to pop/dequeue
+    --> which means we remove everything in given stack or queue
+-that means data is gone unless we save it in variable
+-NOTE: not case for linked lists
+
+we limit capabilities..
+-of linked lists so that it can act like queue or stack
+    --> with appropriate behavior
+
+documentation
+-what is a method called?
+-what does a method do?
+-what does this method return?
+-how can I use this method in my program?
+-does this method have any side-effects?
+-what is properties does a class have?
+
+Stack Overflow
+-problems with answers from other programmers
+
 */
 
 
