@@ -109,7 +109,7 @@ stacks:
 traversing data structures
 -only way to traverse stack or queue is to pop/dequeue
     --> which means we remove everything in given stack or queue
--that means data is gone unless we save it in variable
+-that means data is gone unless we save i  in variable
 -NOTE: not case for linked lists
 
 we limit capabilities..
