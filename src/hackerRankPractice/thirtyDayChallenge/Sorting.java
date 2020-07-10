@@ -4,7 +4,7 @@ package hackerRankPractice.thirtyDayChallenge;
 
 
 
-*/
+ */
 
 public class Sorting {
 }
@@ -30,4 +30,58 @@ they land in the correct location.
 Implementation:
 
 */
+
+class SortingExample {
+
+    private static void printArray(String s, int[] x) {
+        // printing every index of the array
+        System.out.print(s + " Array: ");
+
+        // for each loop
+        for (int i : x) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void bubbleSort(int[] x) {
+        printArray("Initial", x);
+
+        // last position is length minus one because counting indices starts at zero
+        int endPosition = x.length - 1;
+        int swapPosition;
+
+        while (endPosition > 0) {
+            swapPosition = 0;
+            for (int i = 0; i < endPosition; i++){
+                if (x[i] > x[i + 1]) {
+                    // swap elements 'i' and 'i + 1':
+                    int tmp = x[i]; // temporary value for making the swap
+                    x[i] = x[i + 1]; // swap elements set equal to each other
+                    x[i + 1] = tmp; // temporary value set to the swapped value
+
+                    swapPosition = i;
+                } // ending if statement
+                printArray("Current", x);
+            } // ending for loop
+
+            endPosition = swapPosition;
+        } // ending while loop
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
