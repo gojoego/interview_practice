@@ -44,20 +44,29 @@ Sample Output:      The word, racecar, is a palindrome.
 */
 
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class QueuesAndStacks {
 
-    LinkedList stack;
-    LinkedList queue;
+    LinkedList<Character> stack = new LinkedList<>();
+    LinkedList<Character> queue = new LinkedList<>();
 
-    public void pushCharacter(char ch){}
-    public void enqueueCharacter(char ch){}
-    public char popCharacter(){
-        return (char) stack.pop();
+    public void pushCharacter(char ch){
+        stack.push(ch);
     }
+
+    public void enqueueCharacter(char ch){
+        queue.add(ch);
+    }
+
+    public char popCharacter(){
+        return stack.pop();
+    }
+
     public char dequeueCharacter(){
-        return (char) queue.remove();
+        return queue.remove();
     }
 
     public static void main(String[] args) {
