@@ -2,11 +2,59 @@ package hackerRankPractice.thirtyDayChallenge;
 
 /*
 
+TASK
+Given an array, a, of size n distinct elements, sort the array
+in ascending order using the Bubble Sort algorithm above. Once sorted, print the following 3 lines:
 
+1.  Array is sorted in numSwaps swaps.
+    where numSwaps is the number of swaps that took place.
+2.  First Element: firstElement
+    where firstElement is the first element in the sorted array.
+3.  Last Element: lastElement
+    where lastElement is the last element in the sorted array.
 
- */
+Hint: To complete this challenge, you will need to add a variable that
+keeps a running tally of all swaps that occur during execution.
+
+Input Format
+
+The first line contains an integer, n, denoting the number of elements in array a.
+The second line contains n space-separated integers describing the respective values of a0, a1,..., an-1.
+
+Constraints:    2 <= n <= 600
+                1 <= ai <= 2 x 10^6, where 0 <= i < n
+
+Output Format
+
+Print the following three lines of output:
+
+Array is sorted in numSwaps swaps.
+where  is the number of swaps that took place.
+First Element: firstElement
+where  is the first element in the sorted array.
+Last Element: lastElement
+where  is the last element in the sorted array.
+
+*/
+
+import java.util.Scanner;
 
 public class Sorting {
+
+    public static void main(String[] args) {
+
+        // bubble sorting example
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] unsorted = new int[n];
+        for (int i = 0; i < n; i++) {
+            unsorted[i] = scanner.nextInt();
+        }
+        scanner.close();
+
+        SortingExample1.bubbleSort(unsorted);
+
+    }
 }
 
 /*
@@ -31,7 +79,7 @@ Implementation:
 
 */
 
-class SortingExample {
+class SortingExample1 {
 
     private static void printArray(String s, int[] x) {
         // printing every index of the array
@@ -53,7 +101,7 @@ class SortingExample {
 
         while (endPosition > 0) {
             swapPosition = 0;
-            for (int i = 0; i < endPosition; i++){
+            for (int i = 0; i < endPosition; i++) {
                 if (x[i] > x[i + 1]) {
                     // swap elements 'i' and 'i + 1':
                     int tmp = x[i]; // temporary value for making the swap
@@ -67,6 +115,35 @@ class SortingExample {
 
             endPosition = swapPosition;
         } // ending while loop
+
+        printArray("Sorted", x);
+    } // ending bubbleSort
+
+}
+
+class SortingExample2 {
+    public void SortingExample2() {
+        int n = 0;
+        for (int i = 0; i < n; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
+
+            for (int j = 0; j < n - 1; j++) {
+                // Swap adjacent elements if they are in decreasing order
+                int[] a = new int[0];
+                if (a[j] > a[j + 1]) {
+                    swap(a[j], a[j + 1]);
+                    numberOfSwaps++;
+                }
+            }
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
+    }
+    private void swap(int i, int i1) {
     }
 }
 
