@@ -2,7 +2,12 @@ package hackerRankPractice.thirtyDayChallenge.person;
 
 /*
 
-1. pointers
+1. pointers "address"
+2. enums "pre-set values"
+3. aliases
+4. JVM
+5. garbage collection
+6. documentation
 
 Pointers
 -variables that store address of another variable in memory
@@ -28,6 +33,8 @@ difference between referenced and primitive data types...
 
 ENUM
 -special data type that allows for variable to be one of a set of pre-defined constants
+
+Aliases
 -
 
 */
@@ -38,15 +45,49 @@ import static hackerRankPractice.thirtyDayChallenge.person.HairColor.*;
 
 public class Persona {
 
+    // ALL CAPS for constants - used for variables that will not change
     HairColor hairColor = BLACK;
 
-    public static void main(String[] args) {
-
+    public Persona(){
+        int a = 5;
     }
 
+    public static void main(String[] args) {
+        Persona peterParker = new Persona();
+        Persona spiderMan = peterParker;
+        // point to same object in memory
+
+        spiderMan.hairColor = PINK;
+
+        System.out.println("Hair Color of Peter Parker: " + peterParker.hairColor);
+        System.out.println("Hair Color of Spider Man: " + spiderMan.hairColor);
+    }
 }
 
 /*
+
+Java garbage collection
+-de-allocates memory and reuses space for something else
+-helps us not run out of memory
+-when objects can no longer be accessed, they are removed by the
+garbage collector
+-part of java virtual machine
+
+JVM
+-abstract computing machine that allows a computer to run Java programs
+
+    1.  specification
+        -what is required to run program?
+    2.  implementation
+        -programs that meets these specifications
+    3.  instance
+        -an implementation in action (exe)
+        -running on system or computer
+        -program being compiled into java byte code
+        -built in compiler in the JVM
+
+documentation -> the reason we don't really need to know anything
+    -we need to know how to look up things
 
 
 

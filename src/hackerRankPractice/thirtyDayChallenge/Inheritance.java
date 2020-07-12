@@ -88,7 +88,7 @@ class Person {
 
 }
 
-class Student extends Persona {
+class Student extends Person {
     private int[] testScores;
 
     /*
