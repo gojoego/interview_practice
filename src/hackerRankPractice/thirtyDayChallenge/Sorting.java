@@ -42,6 +42,28 @@ Sample Output 0     Array is sorted in 0 swaps.
                     First Element: 1
                     Last Element: 3
 
+Explanation 0
+
+The array is already sorted, so 0 swaps take place and we
+print the necessary 3 lines of output shown above.
+
+Sample Input 1      3
+                    3 2 1
+
+Sample Output 1     Array is sorted in 3 swaps.
+                    First Element: 1
+                    Last Element: 3
+
+Explanation 1
+
+The array a = [3, 2, 1] is not sorted, so we perform the following 3 swaps:
+
+    1. [3, 2, 1] -> [2, 3, 1]
+    2. [2, 3, 1] -> [2, 1, 3]
+    3. [2, 1, 3] -> [1, 2, 3]
+
+At this point the array is sorted and we print the necessary 3 lines of output shown above.
+
 */
 
 import java.util.Scanner;

@@ -1,5 +1,7 @@
 package hackerRankPractice.thirtyDayChallenge;
 
+import hackerRankPractice.thirtyDayChallenge.person.Persona;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
@@ -86,7 +88,7 @@ class Person {
 
 }
 
-class Student extends Person {
+class Student extends Persona {
     private int[] testScores;
 
     /*
