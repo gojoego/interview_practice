@@ -28,12 +28,19 @@ Output Format
 
 Print the following three lines of output:
 
-Array is sorted in numSwaps swaps.
-where  is the number of swaps that took place.
-First Element: firstElement
-where  is the first element in the sorted array.
-Last Element: lastElement
-where  is the last element in the sorted array.
+1.  Array is sorted in numSwaps swaps.
+    where numSwaps is the number of swaps that took place.
+2.  First Element: firstElement
+    where firstElement is the first element in the sorted array.
+3.  Last Element: lastElement
+    where lastElement is the last element in the sorted array.
+
+Sample Input 0      3
+                    1 2 3
+
+Sample Output 0     Array is sorted in 0 swaps.
+                    First Element: 1
+                    Last Element: 3
 
 */
 
