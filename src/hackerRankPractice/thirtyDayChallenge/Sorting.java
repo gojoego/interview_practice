@@ -150,6 +150,8 @@ class SortingExample1 {
 
 }
 
+/*
+
 class SortingExample2 {
     public void SortingExample2() {
         int n = 0;
@@ -172,11 +174,12 @@ class SortingExample2 {
             }
         }
     }
+
     private void swap(int i, int i1) {
     }
 }
 
-
+*/
 
 
 
