@@ -38,5 +38,18 @@ followed by a type parameter in angle brackets
 (E, K, and V) all follow the conventions shown above
 -helps us make some assumptions about the type of objects these type parameters
 are standing in for
+-like we pass arguments to functions and methods, we need to specify data types
+for our type parameters when we instantiate generic objects
+
+    List<String> stringList = new LinkedList<String>();
+    List<Integer> integerList = new ArrayList<Integer>();
+    Map<String, String> stringToStringMap = new HashMap<String, String>();
+    Map<String, Integer> stringToIntMap = new LinkedHashMap<String, Integer>();
+
+-once a data type is specified and an object is created, the specified type replaces
+every occurrence of the generic type parameter in the instantiated class
+-compiler also performs strict type checking to ensure you haven't tried to do
+anything not allowable for that data type (e.g.: trying to add an element to
+integerList that isn't of type Integer).
 
 */
