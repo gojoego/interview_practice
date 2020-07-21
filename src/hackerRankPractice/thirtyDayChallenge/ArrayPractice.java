@@ -35,11 +35,14 @@ for(String s : array){
 public class ArrayPractice {
 
     public static <E> void printArray(E[] array){
-        System.out.println("[");
         for (E element: array) {
-            System.out.println(element);
+            System.out.print(element + " ");
         }
+        System.out.println();
     }
+    // can even use generic as return type
+    // can also specify methods in generics
+    // similar to interfaces
 
 /*
     public static void printArray(int[] array){

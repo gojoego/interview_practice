@@ -101,7 +101,7 @@ is [2,3,4,1], so the printed output is 2 3 4 1.
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Node {
+class Node<D> {
     int data;
     Node next;
     Node(int d){
@@ -110,10 +110,10 @@ class Node {
     }
 }
 
-public class LinkedListUS {
+public class LinkedListUS<D> {
 
     // properties
-    Node1 head;
+    Node1<D> head;
     int count;
 
     // constructors
@@ -123,7 +123,7 @@ public class LinkedListUS {
 //        count = 0;
 //    }
 
-    public LinkedListUS(Node1 newHead){
+    public LinkedListUS(Node1<D> newHead){
         head = newHead;
         count = 1;
     }
@@ -131,11 +131,11 @@ public class LinkedListUS {
     // methods
 
     // add
-    public void add(int newData){
+    public void add(D newData){
         // first create new node with data
-        Node1 temp = new Node1(newData);
+        Node1<D> temp = new Node1(newData);
         // set reference to last node
-        Node1 current = head;
+        Node1<D> current = head;
         // while loop to iterate through list
         while (current.getNext() != null){
             current = current.getNext();
@@ -145,11 +145,11 @@ public class LinkedListUS {
     }
 
     // get
-    public int get(int index){
-        if (index <= 0){
-            return -1; // better to throw an exception, should equal null
-        }
-        Node1 current = head;
+    public D get(int index){
+//        if (index <= 0){
+//            return -1; // better to throw an exception, should equal null
+//        }
+        Node1<D> current = head;
         // starting at 1 because starting count at 1
         for (int i = 1; i < index; i++){
             current = current.getNext();
@@ -170,7 +170,7 @@ public class LinkedListUS {
     // remove
     public void move(){
         // remove from back of list
-        Node1 current = head;
+        Node1<D> current = head;
         while (current.getNext().getNext() != null){
             current = current.getNext();
         }
@@ -180,11 +180,11 @@ public class LinkedListUS {
 
     public static void main(String[] args) {
 
-//        LinkedList<String> linkedList = new LinkedList<>();
-//        linkedList.add("Alice");
-//        System.out.println(linkedList);
-//        linkedList.add("Alicey");
-//        System.out.println(linkedList);
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Alice");
+        System.out.println(linkedList);
+        linkedList.add("Alicey");
+        System.out.println(linkedList);
 
         Scanner sc = new Scanner(System.in);
         Node head = null;

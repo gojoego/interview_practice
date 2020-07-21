@@ -31,10 +31,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Queuey {
+public class Queuey<D> {
 
     // creating a linked list
-    LinkedList queue;
+    LinkedList<D> queue;
 
     // making a queue instance
     public Queuey(){
@@ -52,37 +52,37 @@ public class Queuey {
     }
 
     // enqueueing an item
-    public void enqueue(String n){
+    public void enqueue(D n){
         queue.addLast(n);
     }
 
     // de-queueing an item
-    public String dequeue(){
+    public D dequeue(){
         // must cast to int because method originally takes in object
-        return (String) queue.remove();
+        return queue.remove();
     }
 
     // peek at the first item
-    public String peek(){
-        return (String) queue.get(0);
+    public D peek(){
+        return queue.get(0);
     }
 
     public static void main(String[] args) {
 
-//        Queuey numberQueue = new Queuey();
-//        numberQueue.enqueue(5);
-//        numberQueue.enqueue(7);
-//        numberQueue.enqueue(6);
-//        System.out.println("First out: " + numberQueue.dequeue());
-//        System.out.println("Peek at second item: " + numberQueue.peek());
-//        System.out.println("Second out: " + numberQueue.dequeue());
-//        System.out.println("Third out: " + numberQueue.dequeue());
+        Queuey numberQueue = new Queuey();
+        numberQueue.enqueue(5);
+        numberQueue.enqueue(7);
+        numberQueue.enqueue(6);
+        System.out.println("First out: " + numberQueue.dequeue());
+        System.out.println("Peek at second item: " + numberQueue.peek());
+        System.out.println("Second out: " + numberQueue.dequeue());
+        System.out.println("Third out: " + numberQueue.dequeue());
 
-//        Queuey stringQueue = new Queuey();
-//        stringQueue.enqueue("hi");
-//        stringQueue.enqueue("there");
-//        System.out.print(stringQueue.dequeue() + " ");
-//        System.out.print(stringQueue.dequeue() + ".");
+        Queuey stringQueue = new Queuey();
+        stringQueue.enqueue("hi");
+        stringQueue.enqueue("there");
+        System.out.print(stringQueue.dequeue() + " ");
+        System.out.print(stringQueue.dequeue() + ".");
 
         // when working with data structures, will want one data type
         Stack<String> stacky = new Stack<>();
