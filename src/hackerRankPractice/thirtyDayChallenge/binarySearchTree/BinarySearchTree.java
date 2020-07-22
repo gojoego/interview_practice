@@ -27,6 +27,7 @@ what makes something a child vs a parent
 heap
 -root has special relations with children
 -but children have no relationship with each other
+-tree/heap idea can be implemented as an array
 
 1. min-heap:
     -smaller data
@@ -42,12 +43,38 @@ heap
     =opposite of min heap
     -largest element at root
     -root is largest element
-    -
+    -multiple representations of data as long as max-heap property reserved
+    -get child
+        parent * 2
+        parent * 2 + 1
+    -get parent
+        child/2
 
+binary search trees (bst)
+-relationships between children matter
+-tree where root is middle node
+-left child is less
+-right child greater
+-recursive structure
+-can be implemented as arrays
+-get parent: child/2 = parent
+-left child: parent * 2
+-right child: parent * 2 + 1
+
+what are we making?
+
+-a tree interface implemented by:
+    1. nonemptybst -> class representing non-empty binary search trees
+    2. emptybst -> class representing empty binary search trees
 
 */
 
 public class BinarySearchTree {
+
+    public static void main(String[] args) {
+
+    }
+
 }
 
 /*
