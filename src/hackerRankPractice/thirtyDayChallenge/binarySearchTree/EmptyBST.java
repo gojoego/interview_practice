@@ -3,7 +3,6 @@ package hackerRankPractice.thirtyDayChallenge.binarySearchTree;
 public class EmptyBST<D extends Comparable> implements Tree<D> {
 
     public EmptyBST(){
-
     }
 
     public boolean isEmpty(){
@@ -18,8 +17,7 @@ public class EmptyBST<D extends Comparable> implements Tree<D> {
         return false;
     }
 
-
     public NonEmptyBST<D> add(D element) {
-        return new nonEmptyBST<D>(element);
+        return new NonEmptyBST<D>(element);
     }
 }
