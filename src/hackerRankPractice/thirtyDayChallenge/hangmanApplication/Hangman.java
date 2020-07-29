@@ -1,4 +1,4 @@
 package hackerRankPractice.thirtyDayChallenge.hangmanApplication;
 
-public class HangmanApplicatoin {
+public class Hangman {
 }
