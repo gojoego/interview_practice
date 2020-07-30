@@ -53,6 +53,9 @@ public class LevelOrderTraversal {
 
     static void levelOrder(Node1 root){
         //Write your code here
+        if (root != null){
+
+        }
 
 //        levelOrder(BinaryTree t) {
 //            if(t is not empty) {
