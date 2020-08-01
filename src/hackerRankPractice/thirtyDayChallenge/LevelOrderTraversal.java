@@ -36,6 +36,10 @@ Sample Output
 
 */
 
+import com.sun.source.tree.BinaryTree;
+
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 class Node1 {
@@ -53,8 +57,20 @@ public class LevelOrderTraversal {
 
     static void levelOrder(Node1 root){
         //Write your code here
-        if (root != null){
+        Queue<Node1> queue = new LinkedList<Node1>();
 
+        if (root != null){
+            queue.add(root);
+            while (!queue.isEmpty()){
+                Node1 tree = queue.remove();
+                System.out.print(tree.data + " ");
+                if (tree.left != null){
+                    queue.add(tree.left);
+                }
+                if (tree.right != null){
+                    queue.add(tree.right);
+                }
+            }
         }
 
 //        levelOrder(BinaryTree t) {
