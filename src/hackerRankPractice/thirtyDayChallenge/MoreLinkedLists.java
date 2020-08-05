@@ -43,8 +43,7 @@ so we remove the two duplicate nodes. We then return our updated (ascending) lis
 
 */
 
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 class Node2 {
     int data;
@@ -59,12 +58,25 @@ class Node2 {
 public class MoreLinkedLists {
 
     public static Node2 removeDuplicates(Node2 head) {
-        LinkedList list = new LinkedList();
-        // write your code here
-        // utilize linkedlist
-        // if current == next then remove
-        // for loop to iterate over nodes
-        // how do we get to 
+        if (head.next == null){
+            return head;
+        } else {
+            Node2 current = head;
+            Node2 after = current.next;
+            while (after != null){
+                if (current.data == after.data){
+                    after = after.next;
+                    if (after == null){
+                        current.next = null;
+                    }
+                } else {
+                    current.next = after;
+                    current = after;
+                    after = after.next;
+                }
+            }
+        }
+        return head;
     }
 
     public static Node2 insert(Node2 head, int data) {
