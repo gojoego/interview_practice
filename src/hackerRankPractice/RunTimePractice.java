@@ -22,17 +22,33 @@ B.  See what the code does
 
 import sun.awt.AWTIcon32_security_icon_bw16_png;
 
+import java.util.ArrayList;
+
 public class RunTimePractice {
 
     // repetition function
     public static int findNumberOfRepetitions(String s, char c){
-        int sum = 0;
-        for (int i = 0; i < s.length(); i++){
-            if (s.charAt(i) == c){
-                sum++;
+        // linear time; O(n) time
+        int sum = 0; // 1
+        for (int i = 0; i < s.length(); i++){ // 1, n + 1, n
+            if (s.charAt(i) == c){ // n
+                sum++; // n
             }
         }
-        return sum;
+        return sum; // 1
+    }
+
+    public static int[] findNumsOfRepetitionsv1(String s, char[] c){
+        // quadratic time; O(n * m)
+        int[] sums = new int[c.length]; // constant 1
+        for (int i = 0; i < s.length(); i++){ // 1, n + 1, n
+            for (int j = 0; j < c.length; j++){ // n, n * m + 1, n * m
+                if (s.charAt(i) == c[j]){ // n * m
+                    sums[j] = sums[j] + 1; // n * m
+                }
+            }
+        }
+        return sums; // 1
     }
 
     public static void main(String[] args) {
@@ -62,7 +78,39 @@ running time
 
 * how fast the code runs in proportion to its input *
 
-e
+example:    input n = 100; will program run for 200ms, 100ms, 50ms?
+            two functions p1 and p2
+            p1: 1 sec
+            p2: 10 sec
+            p1 better because it is faster
+
+complexities:
+
+O(1) -> constant does not depend on input
+    example:    input   time
+                100     10ms
+                1000    10ms
+                10000   10ms
+
+O(log(n)) -> logarithmic
+    example:    input   time
+                16      3ms
+                200+    4ms
+                +++     20ms (still pretty quick)
+
+O(n) -> linear (have to go through each element once)
+    example:    input   time
+                100     100ms
+                1000    1000ms
+                10000   10000ms
+    size problem == size of the solution
+
+O(n^2) -> quadratic (nested for loops)
+    have to go through input once and another n times: outer and inner loop
+    example:    input  time
+                10     100ms
+                100    10000ms
+                4      16ms
 
 
 
