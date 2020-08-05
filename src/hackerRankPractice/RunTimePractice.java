@@ -23,6 +23,7 @@ B.  See what the code does
 import sun.awt.AWTIcon32_security_icon_bw16_png;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class RunTimePractice {
 
@@ -49,6 +50,23 @@ public class RunTimePractice {
             }
         }
         return sums; // 1
+    }
+
+    // using data structure to create a more optimal solution
+    public static int[] findNumsOfRepetitionsv2(String s, char[] c){
+        // using hashmaps dictionaries to make this running time O(n)
+        // optimal time: O(n * m)
+        int[] sums = new int[c.length]; // constant 1
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++){
+            if (!map.containsKey(s.charAt(i))){
+                map.put(s.charAt(i), 1);
+            } else {
+                int sum = map.get(s.charAt(i));
+                map.put(s.charAt(i), sum + 1);
+            }
+        }
+        return sums;
     }
 
     public static void main(String[] args) {
