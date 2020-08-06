@@ -36,12 +36,29 @@ Prime
 
 */
 
+import java.util.Scanner;
+
 public class RunningTimeAndComplexity {
 
     public static void main(String[] args) {
-        
-    }
 
+        Scanner scanner = new Scanner(System.in);
+
+        // input for number of numbers
+        int numberOfNumbers = scanner.nextInt();
+
+        // declare int array
+        int[] inputArray = new int[numberOfNumbers];
+
+        // for loop
+        for (int i = 0; i < numberOfNumbers; i++){
+            inputArray[i] = scanner.nextInt();
+        }
+
+        for (int index: inputArray){
+            System.out.println(index);
+        }
+    }
 }
 
 /*
