@@ -55,7 +55,7 @@ public class RunTimePractice {
     // using data structure to create a more optimal solution
     public static int[] findNumsOfRepetitionsv2(String s, char[] c){
         // using hashmaps dictionaries to make this running time O(n)
-        // optimal time: O(n * m)
+        // optimal time: O(n + m) String and char array not guaranteed to be equal in length
         int[] sums = new int[c.length]; // constant 1
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++){
@@ -66,6 +66,14 @@ public class RunTimePractice {
                 map.put(s.charAt(i), sum + 1);
             }
         }
+        for (int j = 0; j < c.length; j++){
+            int sum;
+            if (!map.containsKey(c[j])){
+                sums[j] = 0;
+            } else {
+                sums[j] = map.get(c[j]);
+            }
+        }
         return sums;
     }
 
@@ -74,11 +82,33 @@ public class RunTimePractice {
         // setting a timer
         long startTime = System.currentTimeMillis();
 
-        findNumberOfRepetitions("abdaafiashfkjasdfhaskjlfhsadljfh", 'a');
+        findNumberOfRepetitions("abdaafiashfkjasdfhasgsdgashfkjasdadfadfadsfdafadfafhassfdasfdafsdadddddddsdfgsdfgsgsddddddsdgdsfgdsfgdsfgsdgdsfashfkjasdadfadfadsfdafadfafhassdgdsfgdsfgdsfgsdgdsfdsfgsdgdsgsdgdgdsfgsdgsskjlfhsadljfh", 'a');
 
         long endTime = System.currentTimeMillis();
 
         long duration = endTime - startTime;
+
+        System.out.println("Test " + duration + " ms");
+
+        char[] a = {'a', 'b'};
+
+        startTime = System.currentTimeMillis();
+
+        findNumsOfRepetitionsv1("abdaafiashfkjasdadfadfadsfdafadfashfkjasdadfadfadsfdafaddddddddddddddfafsdfgdsgdsgdsfgsdfgsdgdsgdsfgsdhassdgdsfgdsfgdsfgsdgdsfafhassdgdsfgdsfgdsfgsdgdsfgdsfgdfsgdsgkjlfhsadljfh", a);
+
+        endTime = System.currentTimeMillis();
+
+        duration = endTime - startTime;
+
+        System.out.println("Test " + duration + " ms");
+
+        startTime = System.currentTimeMillis();
+
+        findNumsOfRepetitionsv2("abdaafiashfsdfgdsgdsfgdsgdsgdashfkjasdadfadfadsfdafaddddddddddddddfafhassdgdsfgdsfgdsfgsdgdsfashfkjasdadfadfadsfdafadfafhassdgdsfgdsfgdsfgsdgdsfsdgdgdsfgdfgsdgjasdfhaskjlfhsadljfh", a);
+
+        endTime = System.currentTimeMillis();
+
+        duration = endTime - startTime;
 
         System.out.println("Test " + duration + " ms");
     }
