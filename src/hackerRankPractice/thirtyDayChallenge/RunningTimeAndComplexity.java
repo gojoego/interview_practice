@@ -21,18 +21,14 @@ Output Format
 
 For each test case, print whether N is Prime or Not Prime on a new line.
 
-Sample Input
+Sample Input    3
+                12
+                5
+                7
 
-3
-12
-5
-7
-
-Sample Output
-
-Not prime
-Prime
-Prime
+Sample Output   Not prime
+                Prime
+                Prime
 
 */
 
@@ -51,13 +47,29 @@ public class RunningTimeAndComplexity {
         int[] inputArray = new int[numberOfNumbers];
 
         // for loop
-        for (int i = 0; i < numberOfNumbers; i++){
+        for (int i = 0; i < numberOfNumbers; i++) {
             inputArray[i] = scanner.nextInt();
         }
 
-        for (int index: inputArray){
-            System.out.println(index);
+
+        for (int index : inputArray) {
+            if (isPrime(index) && index != 1 || index == 2){
+                System.out.println("Prime");
+            }
+            else {
+                System.out.println("Not prime");
+            }
         }
+    }
+
+    static boolean isPrime(int n) {
+        if (n % 2 == 0)
+            return false;
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
     }
 }
 
