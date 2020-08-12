@@ -71,7 +71,7 @@ what are we making?
 
 public class BinarySearchTree {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         EmptyBST e = new EmptyBST();
         NonEmptyBST n = new NonEmptyBST(5);
