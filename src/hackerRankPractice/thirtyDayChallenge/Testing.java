@@ -28,7 +28,6 @@ TestDataUniqueValues and TestDataExactlyTwoDifferentMinimums following the below
         there are exactly two different minimum values, while method get_expected_result() of this class
         has to return the expected minimum value index for this array.
 
-
 */
 
 import com.sun.xml.internal.ws.policy.spi.AssertionCreationException;
@@ -38,7 +37,10 @@ import java.util.LinkedHashSet;
 public class Testing {
 
     public static void main(String[] args) {
-
+        TestWithEmptyArray();
+        TestWithUniqueValues();
+        TestWithExactlyTwoDifferentMinimums();
+        System.out.println("OK");
     }
 
     public static int minimum_index(int[] seq) {
@@ -67,7 +69,8 @@ public class Testing {
         // this method has to return an empty array
         public static int[] get_array() {
             // complete this function
-            return new int[0];
+            int[] array = {};
+            return array;
         }
     }
 
@@ -75,25 +78,29 @@ public class Testing {
         // has to return an array of at least 2 arrays with all unique elements
         public static int[] get_array(){
             // complete this function
-            return new int[0];
+            int[] array = new int[]{22, 28, 14, 89, 87, 85, 81, 83};
+            return array;
         }
         // this method has to return the expected minimum value index for this array
         public static int get_expected_result(){
             // complete this function
-            return 0;
+            int minimumValue = 14;
+            return minimumValue;
         }
     }
 
-    static class TestDataExactlyTwoDifferentMinimums(){
+    static class TestDataExactlyTwoDifferentMinimums {
         // has to return an array where there are exactly two minimum values
         public static int[] get_array(){
             // complete this function
-            return new int[0];
+            int[] array = new int[]{22, 28, 14, 14, 87, 85, 81, 83};
+            return array;
         }
         // has to return the expected minimum value index for this array
         public static int get_expected_result(){
             // complete this function
-            return 0;
+            int minimumValue = 14;
+            return minimumValue;
         }
     }
 
@@ -146,11 +153,21 @@ public class Testing {
             throw new AssertionError("less than 2 elements in the array");
         }
 
+        // creating int array called tmp and setting it equal to a clone of seq
         int[] tmp = seq.clone();
+        // taking array and running it through sort method
         java.util.Arrays.sort(tmp);
+        if (!(tmp[0] == tmp[1] && (tmp.length == 2 || tmp[1] < tmp[2]))){
+            throw new AssertionError("there are not exactly two minimums in the array");
+        }
+
+        int expected_result = TestDataExactlyTwoDifferentMinimums.get_expected_result();
+        int result = minimum_index(seq);
+        if (result != expected_result){
+            throw new AssertionError("result is different than the expected result");
+        }
 
     }
-
 }
 
 
