@@ -46,25 +46,104 @@ tanya
 
 */
 
-import java.util.Scanner;
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class RegExPatternsDatabases {
 
-    private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
-        int N = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int NItr = 0; NItr < N; NItr++) {
-            String[] firstNameEmailID = scanner.nextLine().split(" ");
-
-            String firstName = firstNameEmailID[0];
-
-            String emailID = firstNameEmailID[1];
+        Scanner scanner = new Scanner(System.in);
+        int numberOfEntries = scanner.nextInt();
+        String emailRegEx = ".+@gmail\\.com$";
+        Pattern pattern = Pattern.compile(emailRegEx);
+        List<String> listOfEmails = new ArrayList();
+        for (int i = 0; i < numberOfEntries; i++){
+            String name = scanner.next();
+            String email = scanner.next();
+            Matcher matcher = pattern.matcher(email);
+            if (matcher.find()){
+                listOfEmails.add(name);
+            }
         }
-        scanner.close();
+        Collections.sort(listOfEmails);
+        for (String name: listOfEmails){
+            System.out.println(name);
+        }
     }
+
+
+//    // creating a Scanner object
+//    private static final Scanner scanner = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        // assigning int input to N
+//        int N = scanner.nextInt();
+//        // skips to next line
+//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+//
+//        String[] alphabetizeMe = new String[N];
+//        // for loop to create array for every input
+//        for (int NItr = 0; NItr < N; NItr++) {
+//            // creating String array of the first name and email ID
+//            String[] firstNameEmailID = scanner.nextLine().split(" ");
+//
+//            // setting first index of String array to String variable called firstName
+//            String firstName = firstNameEmailID[0];
+//
+//            // setting second index of String array to String variable called emailID
+//            String emailID = firstNameEmailID[1];
+//
+//            String emailDelimiter = "@";
+//
+//            String[] emailArray = emailID.split(emailDelimiter);
+//            String emailDomain = emailArray[1];
+//
+//            System.out.println(emailDomain);
+//
+//
+//            // declare String sequence of 1 or more uppercase and lowercase English
+//            // letters including spaces
+//            String inputString = "[a-zA-Z\\s]+";
+//
+//            // declare string we will check to see if our regex matches
+//            String gmailDomainChecker = "gmail.com";
+//            System.out.println(gmailDomainChecker);
+//
+//            if (emailDomain == gmailDomainChecker){
+//                alphabetizeMe[N] = firstNameEmailID[0];
+//            }
+//
+//            // create a Pattern object or compiled RegEx and save it as pattern
+//            Pattern pattern = Pattern.compile(inputString);
+//
+//            // create a Matcher object to match compiled RegEx to String
+//            Matcher matchingDomain = pattern.matcher(gmailDomainChecker);
+//
+////            if (matchingDomain.find()){
+////                alphabetizeMe[N] = firstName;
+////            }
+//
+//            // take email addresses and match to gmail.com
+//            // take second index String and regex match at the @
+//            // if statement if it matches @gmail.com print out the name
+//            // adding to array that is declared outside of method so we can sort
+//
+//            // if statement to add first index to alphabetizeMe array if conditions meet
+//
+//
+//        }
+//        // print out alphabetical list
+//        for (String a: alphabetizeMe){
+//            System.out.println(a);
+//        }
+//
+//        // alphabetize list of names with emails ending in gmails (sorting algo?)
+//        scanner.close();
+//    }
 }
 
 /*
